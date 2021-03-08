@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `table_users_test` (
 INSERT INTO `table_users_test` (`id_user`, `fname_user`, `lname_user`, `pass_user`, `lang_en_user`, `lang_fr_user`, `lang_jp_user`) VALUES
 (1, 'Kylian', 'ARTU', 'prolinux', 1, 1, 1),
 (2, 'Amaury', 'Rossignol', 'jefaisdesformulairesquali', 0, 1, 0),
-(3, 'Julien', 'HASSOUN', 'jeprefairejoueraApex', 1, 1, 0);
+(3, 'Julien', 'HASSOUN', 'jepreferejoueraApex', 1, 1, 0);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

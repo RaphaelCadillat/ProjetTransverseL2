@@ -1,7 +1,7 @@
 <?php
 
 require 'Model/connection.php';
-include 'session_util.php';
+require 'session_util.php';
 
 try{
     $option = [
@@ -34,15 +34,33 @@ try{
             exit();
         }
 
-        //Recuperation du mdp en database
+        //Recuperation des donnees de l'utilisateur en database
         $row = $get_user->fetch(PDO::FETCH_ASSOC);
         $hash_user = $row['password_user'];
+        $id_user = $row['id_user'];
+        $id_admin = $row['id_admin'];
         $fname_user = $row['fname_user'];
+        $lname_user = $row['lname_user'];
+        $mail_user = $row['mail_user'];
+        $reg_date_user = $row['reg_date_user'];
+        $univ_user = $row['univ_user'];
+        $statuts_user = $row['statuts_user'];
 
         //Comparaison mdp et hash
         if (password_verify($pass, $hash_user))
         {
-            //ini_php_session();
+            //On initialise la session
+            ini_php_session();
+            $_SESSION['id_user'] = $id_user;
+            $_SESSION['id_admin'] = $id_admin;
+            $_SESSION['fname_user'] = $fname_user;
+            $_SESSION['lname_user'] = $lname_user;
+            $_SESSION['mail_user'] = $mail_user;
+            $_SESSION['reg_date_user'] = $reg_date_user;
+            $_SESSION['univ_user'] = $univ_user;
+            $_SESSION['statuts_user'] = $statuts_user;
+            $_SESSION['password_user'] = $hash_user;
+
             echo "<script>alert('Hi, $fname_user, you are now logged')</script>";
             echo "<script>window.open('homepage.php','_self')</script>";
             exit();

@@ -16,8 +16,5 @@ is_logged($_SESSION['mail_user'], $_SESSION['password_user']);
     <body>
         <p>Vous etes sur la homepage</p>
         
-        <?php 
-        
-        ?>
     </body>
 </html>

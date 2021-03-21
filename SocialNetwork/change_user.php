@@ -39,8 +39,8 @@
             <div>
             <br>
 
-            <button id="signin" name="sign_in">Sign In</button>
-            <?php include("verify_log_user.php"); ?>
+            <button id="homepage" name="homepage">Homepage</button>
+            <?php include("signup.php"); ?>
 
         </form>
 

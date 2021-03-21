@@ -12,7 +12,7 @@
 
             <div>
             <input id="email" type="email" name="mail_user" placeholder="Email" required="required">
-            </div>
+            </div><br>
 
             <div>
             <input id="password" type="password" name="pass_user" placeholder="Password" required="required">

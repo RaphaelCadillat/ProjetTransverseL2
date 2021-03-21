@@ -6,43 +6,46 @@
         
     </head>
     <body>
-        <p>Vous etes sur la page de modification de votre compte !</p>
-
+        <p>Please complete all fields!</p>
         <form action="" method="post">
 
             <div>
-            First Name   <button id="userfname" name="user_fname">Edit</button>
-            </div>
-            <br>
+            <input type="text" name="fname_user" placeholder="First Name" required="required">
+            </div><br>
 
             <div>
-            Last Name   <button id="userlname" name="user_lname">Edit</button>
-            </div>
-            <br>
+            <input type="text" name="lname_user" placeholder="Last Name" required="required">
+            </div><br>
 
             <div>
-            E-mail   <button id="mailuser" name="mail_user">Edit</button>
-            </div>
-            <br>
+            <input id="password" type="password" name="pass_user" placeholder="Password" required="required">
+            </div><br>
 
             <div>
-            Language <select id="userlang" name="user_lang">
-                <option value=1>english</option>
-                <option value=2>french</option>
-                <option value=3>spanish</option>
-                <option value=4>deutch</option>
-                <option value=5>italian</option>
-                <option value=6>portuguese</option>
-                <option value=7>chinese</option>
-                <option value=8>japanese</option>
+            <input id="email" type="email" name="mail_user" placeholder="Email" required="required">
+            </div><br>
+
+            <div>
+            <input type="text" name="univ_user" placeholder="University" required="required">
+            </div><br>
+
+            <div>
+            <select name="lang_user" required="required">
+                <option disabled>Select your first language</option>
+                <option value=1>English</option>
+                <option value=2>French</option>
+                <option value=3>Spanish</option>
+                <option value=4>Deutch</option>
+                <option value=5>Italian</option>
+                <option value=6>Portuguese</option>
+                <option value=7>Chinese</option>
+                <option value=8>Japanese</option>
             </select>
-            <div>
-            <br>
+            </div><br>
 
-            <button id="homepage" name="homepage" href="signin.php">Homepage</button>
-            <?php include("signup.php"); ?>
+            <button id="modify" name="modify" type="submit" formaction="profile.php">Modify</button>
+            <?php include("insert_user.php"); ?>
 
         </form>
-
     </body>
 </html>

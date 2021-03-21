@@ -19,7 +19,7 @@
             </div><br>
 
             <a href="signup.php">Pas encore inscrit ?</a><br><br>
-            <a href="change_user.php">Voulez vous modifier votre compte ?</a><br><br>
+            <a href="profile.php">Voulez vous modifier votre compte ?</a><br><br>
 
             <button id="signin" name="sign_in">Sign In</button>
             <?php include("verify_log_user.php"); ?>

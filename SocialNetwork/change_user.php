@@ -11,7 +11,7 @@
         <form action="" method="post">
 
             <div>
-            <p> Name </p>  <button id="username" name="user_name">Modifier</button>
+            Name <button id="username" name="user_name">Modifier</button>
 
             <div>
             <input id="password" type="password" name="pass_user" placeholder="Password" required="required">

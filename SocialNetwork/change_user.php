@@ -6,7 +6,7 @@
         
     </head>
     <body>
-        <p>Vous etes sur la page d'identification !</p>
+        <p>Vous etes sur la page de modification de votre compte !</p>
 
         <form action="" method="post">
 

@@ -27,19 +27,19 @@
 
             <div>
             Language <select id="userlang" name="user_lang">
-                <option value="1">english</option>
-                <option value="2">french</option>
-                <option value="3">spanish</option>
-                <option value="4">deutch</option>
-                <option value="5">italian</option>
-                <option value="6">portuguese</option>
-                <option value="7">chinese</option>
-                <option value="8">japanese</option>
+                <option value=1>english</option>
+                <option value=2>french</option>
+                <option value=3>spanish</option>
+                <option value=4>deutch</option>
+                <option value=5>italian</option>
+                <option value=6>portuguese</option>
+                <option value=7>chinese</option>
+                <option value=8>japanese</option>
             </select>
             <div>
             <br>
 
-            <button id="homepage" name="homepage">Homepage</button>
+            <button id="homepage" name="homepage" href="signin.php">Homepage</button>
             <?php include("signup.php"); ?>
 
         </form>

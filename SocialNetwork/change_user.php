@@ -13,16 +13,20 @@
             <div>
             First Name   <button id="userfname" name="user_fname">Edit</button>
             </div>
+            <br>
+
             <div>
             Last Name   <button id="userlname" name="user_lname">Edit</button>
             </div>
+            <br>
+
             <div>
             E-mail   <button id="mailuser" name="mail_user">Edit</button>
             </div>
+            <br>
+
             <div>
-            Language   <button id="userlang" name="user_lang">Edit</button>
-            </div>
-            <select id="userlang" name="user_lang">
+            Language <select id="userlang" name="user_lang">
                 <option value="1">english</option>
                 <option value="2">french</option>
                 <option value="3">spanish</option>
@@ -32,6 +36,8 @@
                 <option value="7">chinese</option>
                 <option value="8">japanese</option>
             </select>
+            <div>
+            <br>
 
             <button id="signin" name="sign_in">Sign In</button>
             <?php include("verify_log_user.php"); ?>

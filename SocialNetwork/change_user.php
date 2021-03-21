@@ -11,8 +11,7 @@
         <form action="" method="post">
 
             <div>
-            <input id="email" type="email" name="mail_user" placeholder="Email" required="required">
-            </div><br>
+            <p> Name </p>  <button id="username" name="user_name">Modifier</button>
 
             <div>
             <input id="password" type="password" name="pass_user" placeholder="Password" required="required">

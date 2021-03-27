@@ -38,6 +38,11 @@
             <button id="changep" name="change_p" type="submit" formaction="change_user.php">Change your profile </button>
             </div>
             <br>
+
+            <div>
+            <button id="suppr_user" name="suppr_user" type="submit">Delete your profile </button>
+            </div>
+            <br>
             
             <button id="homepage" name="homepage" type="submit" formaction="signin.php">Homepage</button>
 

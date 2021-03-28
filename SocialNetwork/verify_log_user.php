@@ -46,6 +46,19 @@ try{
         $univ_user = $row['univ_user'];
         $statuts_user = $row['statuts_user'];
 
+        //Recuperation de la langue
+        $get_id_lang = $PDO->prepare('SELECT * FROM rel_user_lang WHERE id_user=?');
+        $get_id_lang->bindValue(1,$id_user);
+        $get_id_lang->execute();
+        $row = $get_id_lang->fetch(PDO::FETCH_ASSOC);
+        $id_lang_user = $row['id_lang'];
+
+        $get_lang = $PDO->prepare('SELECT * FROM lang_table WHERE id_lang=?');
+        $get_lang->bindValue(1,$id_lang_user);
+        $get_lang->execute();
+        $row = $get_lang->fetch(PDO::FETCH_ASSOC);
+        $lang_user = $row['lang_lang'];
+
         //Comparaison mdp et hash
         if (password_verify($pass, $hash_user))
         {
@@ -60,6 +73,8 @@ try{
             $_SESSION['univ_user'] = $univ_user;
             $_SESSION['statuts_user'] = $statuts_user;
             $_SESSION['password_user'] = $hash_user;
+            $_SESSION['id_lang_user'] = $id_lang_user;
+            $_SESSION['lang_user'] = $lang_user;
 
             echo "<script>alert('Hi, $fname_user, you are now logged')</script>";
             echo "<script>window.open('homepage.php','_self')</script>";

@@ -15,7 +15,14 @@ is_logged($_SESSION['mail_user'], $_SESSION['password_user']);
 
     <body>
         <p>Vous etes sur la homepage</p>
+<<<<<<< Updated upstream
         
+=======
+
+        
+        <a href="profile.php">Voulez vous modifier votre compte ?</a><br><br>
+
+>>>>>>> Stashed changes
     </body>
 </html>
 

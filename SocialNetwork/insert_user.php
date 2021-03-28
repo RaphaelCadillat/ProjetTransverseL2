@@ -45,7 +45,7 @@ try{
             exit();
         }
 
-        if(strlen($pass_no_secure < 8))
+        if(strlen($pass_no_secure)<8)
         {
             echo"<script>alert('Password must be at least 8 characters')</script>";
             exit();

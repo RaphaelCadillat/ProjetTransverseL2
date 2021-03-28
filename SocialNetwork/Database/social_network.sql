@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : Dim 28 mars 2021 à 20:03
+-- Généré le : Dim 28 mars 2021 à 21:16
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -97,16 +97,7 @@ CREATE TABLE IF NOT EXISTS `rel_user_lang` (
   PRIMARY KEY (`id_rel_user_lang`),
   KEY `rel_user_lang_fk0` (`id_user`),
   KEY `rel_user_lang_fk1` (`id_lang`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Déchargement des données de la table `rel_user_lang`
---
-
-INSERT INTO `rel_user_lang` (`id_rel_user_lang`, `id_user`, `id_lang`) VALUES
-(7, 27, 5),
-(8, 28, 1),
-(9, 29, 1);
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -141,18 +132,10 @@ CREATE TABLE IF NOT EXISTS `user_table` (
   `reg_date_user` datetime NOT NULL,
   `univ_user` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `statuts_user` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id_user`),
   UNIQUE KEY `reg_date_user` (`reg_date_user`)
-) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Déchargement des données de la table `user_table`
---
-
-INSERT INTO `user_table` (`id_user`, `id_admin`, `fname_user`, `lname_user`, `password_user`, `mail_user`, `reg_date_user`, `univ_user`, `statuts_user`) VALUES
-(27, 0, 'Dio', 'Brando', '$2y$10$ahYAn4XgDrpD3GzpJpNuh.qwVvZ7aQjnINQfjizuKfqb65PHqSw02', 'didi@bra', '2021-03-20 17:54:08', 'efrei', 'Za warudo'),
-(28, 0, 'Jotaro', 'Joestar', '$2y$10$EnJuPwxMejXs8qjywSWdfeGRqOmO8IpoldqyCz7sAuZPDczWb/Qq6', 'jojo@gmail.com', '2021-03-20 18:57:53', 'efrei', '...'),
-(29, 0, 'Natuto', 'Uzumaki', '$2y$10$6h1tvcXTS8m7yUeUL89AlO3kVrxgY5ac.wN2CbxAGz7N2mutrcVLS', 'naroute@route', '2021-03-20 19:04:40', 'efrei', '...');
+) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -26,12 +26,12 @@ if ($is_logged == false)
     <head>
         <meta charset = "utf-8" />
         <link rel="stylesheet" href="Style.css" />
-        <div>
-        <button id="profile" name="profile" type="submit" action="profile.php"> Profile </button>
-        </div>
-        <div>
-        <button id="friends" name="friends" type="submit" action="friends.php"> Friends </button>
-        </div>
+        <form action="profile.php">
+            <button id="profile" name="profile" type="submit"> Profile </button>
+        </form>
+        <form action="friends.php">
+            <button id="friends" name="friends" type="submit"> Friends </button>
+        </form>
         <form action="" method="post">
             <button name="logout" id="logout" action="">Log out</button><br>
             <?php include ("logout.php"); ?>

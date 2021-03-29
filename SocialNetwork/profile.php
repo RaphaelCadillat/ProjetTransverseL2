@@ -1,3 +1,19 @@
+<?php
+require 'session_util.php';
+ini_php_session();
+$id_user = $_SESSION['id_user'];
+$id_admin = $_SESSION['id_admin'];
+$fname_user = $_SESSION['fname_user'];
+$lname_user = $_SESSION['lname_user'];
+$mail_user = $_SESSION['mail_user'];
+$reg_date_user = $_SESSION['reg_date_user'];
+$univ_user = $_SESSION['univ_user'];
+$statuts_user = $_SESSION['statuts_user'];
+$hash_user = $_SESSION['password_user'];
+$id_lang_user = $_SESSION['id_lang_user'];
+$lang_user = $_SESSION['lang_user'];
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,29 +39,36 @@
         <form action="" method="post">
 
             <div>
-            <input id="fname" name="f_name" placeholder="First name" disabled>
+            <input id="fname" name="f_name" value="<?php echo htmlspecialchars($fname_user) ?>" disabled>
             </div>
             <br>
 
             <div>
-            <input id="lname" name="l_name" placeholder="Last name" disabled>
+            <input id="lname" name="l_name" value="<?php echo htmlspecialchars($lname_user) ?>" disabled>
             </div>
             <br>
 
             <div>
-            <input id="email" name="mail_user" placeholder="Email" disabled>
+            <input id="email" name="mail_user" value="<?php echo htmlspecialchars($mail_user) ?>" disabled>
             </div>
             <br>
             
             <div>
-            <input id="userlang" name="user_lang" placeholder="Language" disabled>
+            <input id="userlang" name="user_lang" value="<?php echo htmlspecialchars($lang_user) ?>" disabled>
             </div>
             <br>
 
             <div>
-            <input id="univuser" name="univ_user" placeholder="University" disabled>
+            <input id="univuser" name="univ_user" value="<?php echo htmlspecialchars($univ_user) ?>" disabled>
             </div>
             <br>
+
+            <div>
+            <input id="statutsuser" name="statuts_user" value="<?php echo htmlspecialchars($statuts_user) ?>" disabled>
+            </div>
+            <br>
+
+
             <div>
             <button id="changep" name="change_p" type="submit" formaction="change_user.php">Change your profile </button>
             </div>
@@ -56,12 +79,16 @@
             </div>
             <br>
             
+<<<<<<< HEAD
             <div>
             <button id="suppr_user" name="suppr_user" type="submit">Delete your profile </button>
             </div>
             <br>
 
             <button id="homepage" name="homepage" type="submit" formaction="signin.php">Homepage</button>
+=======
+            <button id="homepage" name="homepage" type="submit" formaction="homepage.php">Homepage</button>
+>>>>>>> 1677f25eefe18d11a804929a59452b5b93532b93
 
         </form>
 

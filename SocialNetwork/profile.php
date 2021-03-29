@@ -64,7 +64,7 @@ $lang_user = $_SESSION['lang_user'];
             <br>
 
             <div>
-            <input id="statutsuser" name="statuts_user" value="<?php echo htmlspecialchars($statuts_user) ?>" disabled>
+            <textarea id="statutsuser" name="statuts_user" disabled><?php echo htmlspecialchars($statuts_user) ?></textarea>
             </div>
             <br>
 

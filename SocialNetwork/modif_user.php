@@ -104,7 +104,7 @@ try{
             $_SESSION['id_lang_user'] = $new_id_lang;
             $_SESSION['lang_user'] = $new_lang;
 
-
+            
             echo "<script>alert('Informations are modified')</script>";
             echo "<script>window.open('profile.php','_self')</script>";
         }

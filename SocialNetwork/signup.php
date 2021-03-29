@@ -22,7 +22,7 @@
             </div><br>
 
             <div>
-            <input id="verif_pass_user" type="password" name="verif_pass_user" placeholder="Password" required="required">
+            <input id="verif_pass_user" type="password" name="verif_pass_user" placeholder="Verify Password" required="required">
             </div><br>
 
             <div>

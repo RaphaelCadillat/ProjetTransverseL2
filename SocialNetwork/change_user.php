@@ -54,7 +54,7 @@ $lang_user = $_SESSION['lang_user'];
             </div><br>
 
             <div>
-            <input id="statutsuser" name="statuts_user" value="<?php echo htmlspecialchars($statuts_user) ?>" required="required">
+            <textarea id="statutsuser" name="statuts_user" required="required"><?php echo htmlspecialchars($statuts_user) ?></textarea>
             </div>
             <br>
 

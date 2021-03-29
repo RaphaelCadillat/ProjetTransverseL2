@@ -21,3 +21,10 @@
     margin-left: 83%;
     margin-top: -0,5%;
 }
+
+#statutsuser
+{
+    resize: none;
+    width: 500px;
+    height: 200px;
+}

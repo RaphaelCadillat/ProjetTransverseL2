@@ -30,7 +30,6 @@ $lang_user = $_SESSION['lang_user'];
             <?php include ("logout.php"); ?>
         </form>
         <br>
-        <br>
         <title>Social Network</title>
         
     </head>
@@ -40,31 +39,38 @@ $lang_user = $_SESSION['lang_user'];
         <form action="" method="post">
 
             <div>
+            First Name :
             <input id="fname" name="f_name" value="<?php echo htmlspecialchars($fname_user) ?>" disabled>
             </div>
             <br>
 
             <div>
+            Last Name :
             <input id="lname" name="l_name" value="<?php echo htmlspecialchars($lname_user) ?>" disabled>
             </div>
             <br>
 
             <div>
+            Mail :
             <input id="email" name="mail_user" value="<?php echo htmlspecialchars($mail_user) ?>" disabled>
             </div>
             <br>
             
             <div>
+            Language :
             <input id="userlang" name="user_lang" value="<?php echo htmlspecialchars($lang_user) ?>" disabled>
             </div>
             <br>
 
             <div>
+            University :
             <input id="univuser" name="univ_user" value="<?php echo htmlspecialchars($univ_user) ?>" disabled>
             </div>
             <br>
 
             <div>
+            Description :
+            <br>
             <textarea id="statutsuser" name="statuts_user" disabled><?php echo htmlspecialchars($statuts_user) ?></textarea>
             </div>
             <br>

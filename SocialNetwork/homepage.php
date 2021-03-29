@@ -37,7 +37,6 @@ if ($is_logged == false)
             <?php include ("logout.php"); ?>
         </form>
         <br>
-        <br>
         <title>Social Network</title>
         
     </head>

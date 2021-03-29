@@ -30,7 +30,6 @@ $lang_user = $_SESSION['lang_user'];
             <?php include ("logout.php"); ?>
         </form>
         <br>
-        <br>
         <title>Social Network</title>
         
     </head>
@@ -39,27 +38,22 @@ $lang_user = $_SESSION['lang_user'];
         <form action="" method="post">
 
             <div>
+            First Name :
             <input type="text" name="fname_user" value="<?php echo htmlspecialchars($fname_user) ?>" required="required">
             </div><br>
 
             <div>
+            Last Name :
             <input type="text" name="lname_user" value="<?php echo htmlspecialchars($lname_user) ?>" required="required">
             </div><br>
 
             <div>
+            Mail :
             <input id="email" type="email" name="mail_user" value="<?php echo htmlspecialchars($mail_user) ?>" required="required">
             </div><br>
 
             <div>
-            <input type="text" name="univ_user" value="<?php echo htmlspecialchars($univ_user) ?>" required="required">
-            </div><br>
-
-            <div>
-            <textarea id="statutsuser" name="statuts_user" required="required"><?php echo htmlspecialchars($statuts_user) ?></textarea>
-            </div>
-            <br>
-
-            <div>
+            Language :
             <select name="lang_user" required="required">
                 <option disabled>Select your first language</option>
                 <option value=1 <?php if ($id_lang_user == 1) echo "selected"; ?>>English</option>
@@ -72,6 +66,18 @@ $lang_user = $_SESSION['lang_user'];
                 <option value=8 <?php if ($id_lang_user == 8) echo "selected"; ?>>Japanese</option>
             </select>
             </div><br>
+
+            <div>
+            University :
+            <input type="text" name="univ_user" value="<?php echo htmlspecialchars($univ_user) ?>" required="required">
+            </div><br>
+
+            <div>
+            Description :
+            <br>
+            <textarea id="statutsuser" name="statuts_user" required="required"><?php echo htmlspecialchars($statuts_user) ?></textarea>
+            </div>
+            <br>
 
             <button id="modify" name="modify" type="submit" >Modify</button>
             <?php include("modif_user.php"); ?>

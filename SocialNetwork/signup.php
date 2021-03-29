@@ -22,6 +22,10 @@
             </div><br>
 
             <div>
+            <input id="verif_pass_user" type="password" name="verif_pass_user" placeholder="Password" required="required">
+            </div><br>
+
+            <div>
             <input id="email" type="email" name="mail_user" placeholder="Email" required="required">
             </div><br>
 

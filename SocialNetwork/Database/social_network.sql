@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : sam. 20 mars 2021 à 15:18
+-- Généré le : Dim 28 mars 2021 à 21:16
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -75,7 +75,7 @@ DROP TABLE IF EXISTS `messages_table`;
 CREATE TABLE IF NOT EXISTS `messages_table` (
   `id_message` int(11) NOT NULL AUTO_INCREMENT,
   `content_message` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `date_meassage` datetime NOT NULL,
+  `date_message` datetime NOT NULL,
   `id_sender_message` int(11) NOT NULL,
   `id_receiver_message` int(11) NOT NULL,
   PRIMARY KEY (`id_message`),
@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `rel_user_lang` (
   PRIMARY KEY (`id_rel_user_lang`),
   KEY `rel_user_lang_fk0` (`id_user`),
   KEY `rel_user_lang_fk1` (`id_lang`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -132,9 +132,10 @@ CREATE TABLE IF NOT EXISTS `user_table` (
   `reg_date_user` datetime NOT NULL,
   `univ_user` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `statuts_user` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id_user`),
   UNIQUE KEY `reg_date_user` (`reg_date_user`)
-) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

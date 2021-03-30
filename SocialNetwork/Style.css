@@ -31,19 +31,20 @@
 
 #friend1
 {
-    margin-left: 30px;
+    position: absolute;
+    left: 30px;
 }
 
 #friend2
 {
-    margin-left: 530px;
-    margin-top: -430px;
+    position: absolute;
+    left: 530px;
 }
 
 #friend3
 {
-    margin-left: 1030px;
-    margin-top: -430px;
+    position: absolute;
+    left: 1030px;
 }
 
 #homepage
@@ -51,4 +52,25 @@
     position: absolute;
     left: 30px;
     top: 700px;
+}
+
+#refresh
+{
+    position: absolute;
+    height: 4%;
+    left : 90%;
+    top : 70%;
+}
+
+#addfriend
+{
+    margin-left : 60px;
+}
+
+#l_user
+{
+    position: absolute;
+    height: 4%;
+    left : 81%;
+    top : 70%;
 }

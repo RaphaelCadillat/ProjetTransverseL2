@@ -25,6 +25,18 @@ if ($is_logged == false)
 <html>
     <head>
         <meta charset = "utf-8" />
+        <link rel="stylesheet" href="Style.css" />
+        <form action="profile.php">
+            <button id="profile" name="profile" type="submit"> Profile </button>
+        </form>
+        <form action="friends.php">
+            <button id="friends" name="friends" type="submit"> Friends </button>
+        </form>
+        <form action="" method="post">
+            <button name="logout" id="logout" action="">Log out</button><br>
+            <?php include ("logout.php"); ?>
+        </form>
+        <br>
         <title>Social Network</title>
         
     </head>
@@ -33,11 +45,6 @@ if ($is_logged == false)
         <p>Vous etes sur la homepage</p>
         
         <a href="profile.php">Voulez vous modifier votre compte ?</a><br><br>
-
-        <form action="" method="post">
-            <button name="logout" id="logout" name="logout" action="">Log Out</button><br>
-            <?php include ("logout.php"); ?>
-        </form>
 
     </body>
 </html>

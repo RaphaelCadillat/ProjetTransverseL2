@@ -4,6 +4,9 @@ width:auto;
 height: auto;
 background-size: cover;
 }
+body{
+    overflow: hidden;
+}
 button{
     font-family:Arial, Helvetica, sans-serif;
     color: white;
@@ -24,9 +27,11 @@ h1{
     margin: auto;
     background-color: white;
     width: 35%;
-    height: 80%;
+    height: 600px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+
+    
     
 }
 
@@ -35,4 +40,8 @@ input{
     display: block;
     margin: auto;
     height: 25%;
+}
+form{
+    margin-top: 100px;
+    margin-bottom: 100px;
 }

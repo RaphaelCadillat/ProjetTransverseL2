@@ -6,10 +6,11 @@
         <link rel="stylesheet"href="signin.css" />
     </head>
     <body>
-        <p>Vous etes sur la page d'identification !</p>
+        
         <div class="formulaire">
+        <p>Vous etes sur la page d'identification !</p>
         <form action="" method="post">
-       <strong> Email : </strong><br>
+       <strong > Email : </strong><br>
             <div>
             
             <input id="email" type="email" name="mail_user" placeholder="Email" required="required">

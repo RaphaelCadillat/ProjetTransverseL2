@@ -1,0 +1,26 @@
+html{
+    
+    widht:1000px;
+    background-image:url("titre.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: grey;
+    margin-bottom: 150px;
+
+}
+
+
+button{
+    background-color: greenyellow;
+    font-size: 30px;
+    display: block;
+    margin:auto;
+    height: 5%;
+    width: 30%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

@@ -18,6 +18,8 @@ try{
         $first_name = htmlentities($_POST['fname_user']); //$PDO->quote();
         $last_name = htmlentities($_POST['lname_user']);
         $password = password_hash($_POST['pass_user'], PASSWORD_BCRYPT);
+        $pass_no_secure = htmlentities($_POST['pass_user']);
+        $verif_pass = htmlentities($_POST['verif_pass_user']);
         $email = htmlentities($_POST['mail_user']);
         $univ = htmlentities($_POST['univ_user']);
         $lang = htmlentities($_POST['lang_user']);
@@ -43,9 +45,15 @@ try{
             exit();
         }
 
-        if(strlen($_POST['pass_user']) < 8)
+        if(strlen($pass_no_secure)<8)
         {
             echo"<script>alert('Password must be at least 8 characters')</script>";
+            exit();
+        }
+
+        if ($pass_no_secure != $verif_pass)
+        {
+            echo"<script>alert('You write two differents passwords')</script>";
             exit();
         }
 

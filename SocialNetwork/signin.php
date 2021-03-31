@@ -21,6 +21,7 @@
             <input id="password" type="password" name="pass_user" placeholder="Password" required="required">
             </div><br>
 
+            <a href="forgot_password_page.php">Forgot password ?</a><br>
             <a href="signup.php">Pas encore inscrit ?</a><br><br>
 
             <button id="signin" name="sign_in">Sign In</button>

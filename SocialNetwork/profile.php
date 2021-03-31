@@ -12,6 +12,8 @@ $statuts_user = $_SESSION['statuts_user'];
 $hash_user = $_SESSION['password_user'];
 $id_lang_user = $_SESSION['id_lang_user'];
 $lang_user = $_SESSION['lang_user'];
+
+include("delete_user.php");
 ?>
 
 <!DOCTYPE html>

@@ -47,7 +47,7 @@ require 'add_friend.php';
     </head>
     <body>
         
-        <form action="confirm_req1.php" method="post">
+        <form action="confirm_req/confirm_req1.php" method="post">
             <div>
             <input id="fname" name="f_name1" value="<?php echo htmlspecialchars($fname_user1) ?>" disabled>
             </div>
@@ -83,7 +83,7 @@ require 'add_friend.php';
         
 
         
-        <form action="confirm_req2.php" method="post">
+        <form action="confirm_req/confirm_req2.php" method="post">
             <div>
             <input id="fname" name="f_name2" value="<?php echo htmlspecialchars($fname_user2) ?>" disabled>
             </div>
@@ -114,12 +114,12 @@ require 'add_friend.php';
             </div>
             <br>
 
-            <button id="addfriend" name="addfriend2" type="submit" formaction="confirm_req2.php">Add <?php echo htmlspecialchars($fname_user2) ?> as friend</button>
+            <button id="addfriend" name="addfriend2" type="submit" >Add <?php echo htmlspecialchars($fname_user2) ?> as friend</button>
         </form>
 
 
         
-        <form action="confirm_req3.php" method="post">
+        <form action="confirm_req/confirm_req3.php" method="post">
             <div>
             <input id="fname" name="f_name3" value="<?php echo htmlspecialchars($fname_user3) ?>" disabled>
             </div>
@@ -150,7 +150,7 @@ require 'add_friend.php';
             </div>
             <br>
 
-            <button id="addfriend" name="addfriend3" type="submit" formaction="confirm_req3.php">Add <?php echo htmlspecialchars($fname_user3) ?> as friend</button>
+            <button id="addfriend" name="addfriend3" type="submit" >Add <?php echo htmlspecialchars($fname_user3) ?> as friend</button>
         </form>
        
 

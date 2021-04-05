@@ -1,5 +1,5 @@
 <?php
-require 'session_util.php';
+require '../session_util.php';
 ini_php_session();
 $id_user = $_SESSION['id_user'];
 $id_admin = $_SESSION['id_admin'];
@@ -19,8 +19,8 @@ if ($is_logged == false)
     echo "<script>window.open('index.php','_self')</script>";
 }
 
-require 'req_user.php';
-$a = add_req_friend($id_user, $_SESSION['id_user1']);
+require '../req_user.php';
+$a = add_req_friend($id_user, $_SESSION['id_user2']);
 if($a==false)
 {
     echo 'raté';
@@ -40,7 +40,8 @@ else{
     </head>
 
     <body>
-        <form action="friends.php" method="post">
+        
+        <form action="../friends.php" method="post">
             <button type="submit">nice</button>
         </form>
     </body>

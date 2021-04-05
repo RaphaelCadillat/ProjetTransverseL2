@@ -1,6 +1,6 @@
 <?php
 
-require 'session_util.php';
+require '../../Model/session_util.php';
 ini_php_session();
 $id_user = $_SESSION['id_user'];
 $id_admin = $_SESSION['id_admin'];
@@ -18,11 +18,11 @@ $lang_user = $_SESSION['lang_user'];
 $is_logged = is_logged($mail_user, $hash_user);
 if ($is_logged == false)
 {
-    echo "<script>window.open('index.php','_self')</script>";
+    echo "<script>window.open('../../index.php','_self')</script>";
 }
 
-require 'print_friend.php';
-require 'add_friend.php';
+require '../../Controller/discover_friends/print_friend.php';
+require '../../Controller/discover_friends/add_friend.php';
 
 ?>
 
@@ -30,7 +30,7 @@ require 'add_friend.php';
 <html>
     <head>
         <meta charset = "utf-8" />
-        <link rel="stylesheet" href="Style.css" />
+        <link rel="stylesheet" href="../Styles/Style.css" />
         <form action="profile.php">
             <button id="profile" name="profile" type="submit"> Profile </button>
         </form>
@@ -39,7 +39,7 @@ require 'add_friend.php';
         </form>
         <form action="" method="post">
             <button name="logout" id="logout" action="">Log out</button><br>
-            <?php include ("logout.php"); ?>
+            <?php include ("../../Model/logout.php"); ?>
         </form>
         <br>
         <title>Social Network</title>
@@ -47,7 +47,7 @@ require 'add_friend.php';
     </head>
     <body>
         
-        <form action="confirm_req/confirm_req1.php" method="post">
+        <form action="../../Controller/discover_friends/confirm_req/confirm_req1.php" method="post">
             <div>
             <input id="fname" name="f_name1" value="<?php echo htmlspecialchars($fname_user1) ?>" disabled>
             </div>
@@ -83,7 +83,7 @@ require 'add_friend.php';
         
 
         
-        <form action="confirm_req/confirm_req2.php" method="post">
+        <form action="../../Controller/discover_friends/confirm_req/confirm_req2.php" method="post">
             <div>
             <input id="fname" name="f_name2" value="<?php echo htmlspecialchars($fname_user2) ?>" disabled>
             </div>
@@ -119,7 +119,7 @@ require 'add_friend.php';
 
 
         
-        <form action="confirm_req/confirm_req3.php" method="post">
+        <form action="../../Controller/discover_friends/confirm_req/confirm_req3.php" method="post">
             <div>
             <input id="fname" name="f_name3" value="<?php echo htmlspecialchars($fname_user3) ?>" disabled>
             </div>

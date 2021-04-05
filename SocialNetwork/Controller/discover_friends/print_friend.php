@@ -1,7 +1,7 @@
 <?php
 
-require 'Model/connection.php';
-require 'session_util.php';
+require '../../Model/connection.php';
+require '../../Model/session_util.php';
 
 
 //AFFICHER LES PROFILS

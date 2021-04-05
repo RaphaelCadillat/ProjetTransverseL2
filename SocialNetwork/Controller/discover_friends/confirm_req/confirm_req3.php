@@ -1,5 +1,5 @@
 <?php
-require '../session_util.php';
+require '../../../Model/session_util.php';
 ini_php_session();
 $id_user = $_SESSION['id_user'];
 $id_admin = $_SESSION['id_admin'];
@@ -16,10 +16,10 @@ $lang_user = $_SESSION['lang_user'];
 $is_logged = is_logged($mail_user, $hash_user);
 if ($is_logged == false)
 {
-    echo "<script>window.open('index.php','_self')</script>";
+    echo "<script>window.open('../../../index.php','_self')</script>";
 }
 
-require '../req_user.php';
+require '../../../Model/req_user.php';
 $a = add_req_friend($id_user, $_SESSION['id_user3']);
 if($a==false)
 {
@@ -41,7 +41,7 @@ else{
 
     <body>
         
-        <form action="../friends.php" method="post">
+        <form action="../../../View/Pages/friends.php" method="post">
             <button type="submit">nice</button>
         </form>
     </body>

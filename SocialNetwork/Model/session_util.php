@@ -32,7 +32,7 @@ if (!function_exists('is_logged'))
 {
     function is_logged($email, $hash) : bool
     {
-        require 'Model/connection.php';
+        require 'connection.php';
 
         if(!$email || !$hash) //check if the session is on
         {

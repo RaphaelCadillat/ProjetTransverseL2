@@ -1,7 +1,7 @@
 <?php
 function add_req_friend($id_current_user, $id_user_to_add)
 {
-    require 'Model/connection.php';
+    require 'connection.php';
     try{
         $option = [
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',

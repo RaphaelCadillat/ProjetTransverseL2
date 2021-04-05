@@ -1,5 +1,5 @@
 <?php
-require 'session_util.php';
+require '../../Model/session_util.php';
 ini_php_session();
 $id_user = $_SESSION['id_user'];
 $id_admin = $_SESSION['id_admin'];
@@ -16,7 +16,7 @@ $lang_user = $_SESSION['lang_user'];
 $is_logged = is_logged($mail_user, $hash_user);
 if ($is_logged == false)
 {
-    echo "<script>window.open('index.php','_self')</script>";
+    echo "<script>window.open('../../index.php','_self')</script>";
 }
 ?>
 
@@ -25,7 +25,7 @@ if ($is_logged == false)
 <html>
     <head>
         <meta charset = "utf-8" />
-        <link rel="stylesheet" href="Style.css" />
+        <link rel="stylesheet" href="../Styles/Style.css" />
         <form action="profile.php">
             <button id="profile" name="profile" type="submit"> Profile </button>
         </form>
@@ -36,12 +36,12 @@ if ($is_logged == false)
         </div>
         <form action="" method="post">
             <button name="logout" id="logout" action="">Log out</button><br>
-            <?php include ("logout.php"); ?>
+            <?php include ("../../Model/logout.php"); ?>
         </form>
 
         <br>
         <title>Social Network</title>
-        <link rel="stylesheet"href="homepage.css" />
+        <link rel="stylesheet"href="../Styles/homepage.css" />
     </head>
 
     <body>

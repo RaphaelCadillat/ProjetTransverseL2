@@ -7,7 +7,7 @@
     <body>
         <p>Vous êtes sur la page de récupération de mot de passe</p>
 
-        <form action="resetpassword.php" method ="post">
+        <form action="../../Controller/forgot_password/resetpassword.php" method ="post">
             <div>
             <input type="email" name="email" placeholder="Email"><br>
             <input type="submit" name="forgotpassword" value="Request Password"/><br>

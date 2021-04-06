@@ -44,7 +44,7 @@ require '../../Controller/discover_friends/add_friend.php';
         </ul>
         </div>
         
-        <form action="../../Controller/discover_friends/confirm_req/confirm_req1.php" method="post">
+        <form class="friend1" action="../../Controller/discover_friends/confirm_req/confirm_req1.php" method="post">
             <div>
             <input id="fname" name="f_name1" value="<?php echo htmlspecialchars($fname_user1) ?>" disabled>
             </div>
@@ -80,7 +80,7 @@ require '../../Controller/discover_friends/add_friend.php';
         
 
         
-        <form action="../../Controller/discover_friends/confirm_req/confirm_req2.php" method="post">
+        <form class="friend2" action="../../Controller/discover_friends/confirm_req/confirm_req2.php" method="post">
             <div>
             <input id="fname" name="f_name2" value="<?php echo htmlspecialchars($fname_user2) ?>" disabled>
             </div>
@@ -116,7 +116,7 @@ require '../../Controller/discover_friends/add_friend.php';
 
 
         
-        <form action="../../Controller/discover_friends/confirm_req/confirm_req3.php" method="post">
+        <form class="friend3" action="../../Controller/discover_friends/confirm_req/confirm_req3.php" method="post">
             <div>
             <input id="fname" name="f_name3" value="<?php echo htmlspecialchars($fname_user3) ?>" disabled>
             </div>

@@ -1,19 +1,4 @@
 /*
-#profile
-{
-    position: absolute;
-    height: 4%;
-    margin-left: 88%;
-    margin-top: -0,5%;
-}
-
-#logout
-{
-    position: absolute;
-    height: 4%;
-    margin-left: 92%;
-    margin-top: -0,5%;
-}
 
 #friends
 {
@@ -49,12 +34,6 @@
     left: 1030px;
 }
 
-#homepage
-{   
-    position: absolute;
-    left: 30px;
-    top: 700px;
-}
 
 #refresh
 {

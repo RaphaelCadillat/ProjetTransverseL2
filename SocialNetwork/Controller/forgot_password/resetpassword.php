@@ -1,5 +1,5 @@
 <?php
-require 'Model/connection.php';
+require '../../Model/connection.php';
 
 try{
     $option = [
@@ -27,7 +27,7 @@ try{
             $token = bin2hex(random_bytes(32));
 
             //Contruction de l'url unique
-            $url = "http://localhost/ProjetTransverseL2/SocialNetwork/new_password_user.php?email=".$email."&token=".$token;
+            $url = "http://localhost/ProjetTransverseL2/SocialNetwork/Controller/forgot_password/new_password_user.php?email=".$email."&token=".$token;
 
             //Envoye d'un mail avec l'url pour creation new mdp par utlisateur
             mail($email,"Reset Password","To reset your password, please click on the link: $url","From: socialnetworkprojetl2@gmail.com");

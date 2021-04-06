@@ -1,5 +1,5 @@
 <?php
-require 'session_util.php';
+require '../../Model/session_util.php';
 ini_php_session();
 $id_user = $_SESSION['id_user'];
 $id_admin = $_SESSION['id_admin'];
@@ -13,14 +13,20 @@ $hash_user = $_SESSION['password_user'];
 $id_lang_user = $_SESSION['id_lang_user'];
 $lang_user = $_SESSION['lang_user'];
 
-include("delete_user.php");
+$is_logged = is_logged($mail_user, $hash_user);
+if ($is_logged == false)
+{
+    echo "<script>window.open('../../index.php','_self')</script>";
+}
+
+include("../../Model/delete_user.php");
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset = "utf-8" />
-        <link rel="stylesheet" href="Style.css" />
+        <link rel="stylesheet" href="../Styles/Style.css" />
         <form action="profile.php">
             <button id="profile" name="profile" type="submit"> Profile </button>
         </form>
@@ -29,7 +35,7 @@ include("delete_user.php");
         </form>
         <form action="" method="post">
             <button name="logout" id="logout" action="">Log out</button><br>
-            <?php include ("logout.php"); ?>
+            <?php include ("../../Model/logout.php"); ?>
         </form>
         <br>
         <title>Social Network</title>

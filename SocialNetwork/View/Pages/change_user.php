@@ -1,5 +1,5 @@
 <?php
-require 'session_util.php';
+require '../../Model/session_util.php';
 ini_php_session();
 $id_user = $_SESSION['id_user'];
 $id_admin = $_SESSION['id_admin'];
@@ -18,7 +18,7 @@ $lang_user = $_SESSION['lang_user'];
 <html>
     <head>
         <meta charset = "utf-8" />
-        <link rel="stylesheet" href="Style.css" />
+        <link rel="stylesheet" href="../Styles/Style.css" />
         <form action="profile.php">
             <button id="profile" name="profile" type="submit"> Profile </button>
         </form>
@@ -27,7 +27,7 @@ $lang_user = $_SESSION['lang_user'];
         </form>
         <form action="" method="post">
             <button name="logout" id="logout" action="">Log out</button><br>
-            <?php include ("logout.php"); ?>
+            <?php include ("../../Model/logout.php"); ?>
         </form>
         <br>
         <title>Social Network</title>
@@ -80,7 +80,7 @@ $lang_user = $_SESSION['lang_user'];
             <br>
 
             <button id="modify" name="modify" type="submit" >Modify</button>
-            <?php include("modif_user.php"); ?>
+            <?php include("../../Controller/modif_user.php"); ?>
 
             <button id="homepage" name="homepage" type="submit" formaction="homepage.php">Homepage</button>
 

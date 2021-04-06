@@ -3,7 +3,7 @@
     <head>
         <meta charset = "utf-8" />
         <title>Social Network</title>
-        <link rel="stylesheet"href="signin.css" />
+        <link rel="stylesheet"href="../Styles/signin.css" />
     </head>
     <body>
         
@@ -25,7 +25,7 @@
             <a href="signup.php">Pas encore inscrit ?</a><br><br>
 
             <button id="signin" name="sign_in">Sign In</button>
-            <?php include("verify_log_user.php"); ?>
+            <?php include("../../Model/verify_log_user.php"); ?>
 
         </form>
         </div>

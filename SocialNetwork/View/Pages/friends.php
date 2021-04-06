@@ -31,21 +31,18 @@ require '../../Controller/discover_friends/add_friend.php';
     <head>
         <meta charset = "utf-8" />
         <link rel="stylesheet" href="../Styles/Style.css" />
-        <form action="profile.php">
-            <button id="profile" name="profile" type="submit"> Profile </button>
-        </form>
-        <form action="friends.php">
-            <button id="friends" name="friends" type="submit"> Friends </button>
-        </form>
-        <form action="" method="post">
-            <button name="logout" id="logout" action="">Log out</button><br>
-            <?php include ("../../Model/logout.php"); ?>
-        </form>
-        <br>
         <title>Social Network</title>
         
     </head>
     <body>
+        <div id="menufond">
+        <ul id="menu">
+            <li><a href="homepage.php">Homepage</a></li>
+            <li><a href="profile.php">Profile</a></li>
+            <li><a href="friends.php">Friends</a></li>
+            <li><a href="#">Log Out</a></li>
+        </ul>
+        </div>
         
         <form action="../../Controller/discover_friends/confirm_req/confirm_req1.php" method="post">
             <div>
@@ -173,11 +170,6 @@ require '../../Controller/discover_friends/add_friend.php';
                 </select>
             </div>
         </form>
-
-        <form action="homepage.php">
-            <button id="homepage" name="homepage" type="submit" >Homepage</button>
-        </form>
-
-
+        
     </body>
 </html>

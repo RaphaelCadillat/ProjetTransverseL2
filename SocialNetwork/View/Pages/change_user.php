@@ -19,21 +19,17 @@ $lang_user = $_SESSION['lang_user'];
     <head>
         <meta charset = "utf-8" />
         <link rel="stylesheet" href="../Styles/Style.css" />
-        <form action="profile.php">
-            <button id="profile" name="profile" type="submit"> Profile </button>
-        </form>
-        <form action="friends.php">
-            <button id="friends" name="friends" type="submit"> Friends </button>
-        </form>
-        <form action="" method="post">
-            <button name="logout" id="logout" action="">Log out</button><br>
-            <?php include ("../../Model/logout.php"); ?>
-        </form>
-        <br>
-        <title>Social Network</title>
-        
+        <title>Social Network</title>     
     </head>
     <body>
+        <div id="menufond">
+        <ul id="menu">
+            <li><a href="homepage.php">Homepage</a></li>
+            <li><a href="profile.php">Profile</a></li>
+            <li><a href="friends.php">Friends</a></li>
+            <li><a href="#">Log Out</a></li>
+        </ul>
+        </div>
         <p>Please complete all fields!</p>
         <form action="" method="post">
 
@@ -81,8 +77,6 @@ $lang_user = $_SESSION['lang_user'];
 
             <button id="modify" name="modify" type="submit" >Modify</button>
             <?php include("../../Controller/modif_user.php"); ?>
-
-            <button id="homepage" name="homepage" type="submit" formaction="homepage.php">Homepage</button>
 
         </form>
     </body>

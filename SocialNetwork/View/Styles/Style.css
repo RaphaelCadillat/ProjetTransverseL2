@@ -1,3 +1,4 @@
+/*
 #profile
 {
     position: absolute;
@@ -21,6 +22,7 @@
     margin-left: 83%;
     margin-top: -0,5%;
 }
+*/
 
 #statutsuser
 {
@@ -74,3 +76,52 @@
     left : 81%;
     top : 70%;
 }
+
+#menufond{
+    width: 100%;
+    background: linear-gradient(#7cb7ff, #1b81ff);
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2),
+                0px 1px 0px 1px rgba(255, 255, 255, 0.5) inset,
+                0px -3px 0px 1px rgba(0, 0, 0, 0.1) inset;
+    overflow : hidden;
+    height : 50px;
+}
+
+#menu{
+	font-family: "Trebuchet MS";
+    display: table;
+	margin-right : 0;
+	margin-left : auto;
+	margin-top : 0;
+	padding : 0;
+}
+
+#menu li{
+    display: table-cell;
+	width: 90px;
+	transition:1s;
+}
+
+#menu li:hover{
+	width:90px;
+	transition:1s;
+}
+
+#menu a{
+	display: block;
+	line-height: 46px;
+    text-align: center;
+	text-decoration : none;
+	color : white;
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+	transition : text-shadow,color 1s;
+	position:relative;  /* utilse pour l'affichage du point */	
+}
+
+#menu a:hover{
+	background: rgba(255,255,255,0.1);
+	border-bottom: solid 4px rgba(255,255,255,0.8);
+}
+
+

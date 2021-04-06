@@ -26,25 +26,19 @@ if ($is_logged == false)
     <head>
         <meta charset = "utf-8" />
         <link rel="stylesheet" href="../Styles/Style.css" />
-        <form action="profile.php">
-            <button id="profile" name="profile" type="submit"> Profile </button>
-        </form>
-        <div class="friend_button">
-        <form action="friends.php">
-            <button id="friends" name="friends" type="submit"> Friends </button>
-        </form>
-        </div>
-        <form action="" method="post">
-            <button name="logout" id="logout" action="">Log out</button><br>
-            <?php include ("../../Model/logout.php"); ?>
-        </form>
-
-        <br>
         <title>Social Network</title>
         <link rel="stylesheet"href="../Styles/homepage.css" />
     </head>
 
     <body>
+        <div id="menufond">
+        <ul id="menu">
+            <li><a href="homepage.php">Homepage</a></li>
+            <li><a href="profile.php">Profile</a></li>
+            <li><a href="friends.php">Friends</a></li>
+            <li><a href="#">Log Out</a></li>
+        </ul>
+        </div>
         <p>Vous êtes sur la homepage</p>
         <div class= "lienhypertext">
         <a href="profile.php">Voulez vous modifier votre compte ?</a><br><br>

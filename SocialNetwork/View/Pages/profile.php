@@ -27,21 +27,18 @@ include("../../Model/delete_user.php");
     <head>
         <meta charset = "utf-8" />
         <link rel="stylesheet" href="../Styles/Style.css" />
-        <form action="profile.php">
-            <button id="profile" name="profile" type="submit"> Profile </button>
-        </form>
-        <form action="friends.php">
-            <button id="friends" name="friends" type="submit"> Friends </button>
-        </form>
-        <form action="" method="post">
-            <button name="logout" id="logout" action="">Log out</button><br>
-            <?php include ("../../Model/logout.php"); ?>
-        </form>
-        <br>
         <title>Social Network</title>
         
     </head>
     <body>
+        <div id="menufond">
+        <ul id="menu">
+            <li><a href="homepage.php">Homepage</a></li>
+            <li><a href="profile.php">Profile</a></li>
+            <li><a href="friends.php">Friends</a></li>
+            <li><a href="#">Log Out</a></li>
+        </ul>
+        </div>
         <p>This is your profile !</p>
 
         <form action="" method="post">
@@ -92,9 +89,6 @@ include("../../Model/delete_user.php");
             <button id="suppr_user" name="suppr_user" type="submit">Delete your profile </button>
             </div>
             <br>
-            
-            
-            <button id="homepage" name="homepage" type="submit" formaction="homepage.php">Homepage</button>
 
         </form>
 

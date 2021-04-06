@@ -41,37 +41,37 @@ include("delete_user.php");
         <form action="" method="post">
 
             <div>
-            First Name :
+            <p>First Name :</p>
             <input id="fname" name="f_name" value="<?php echo htmlspecialchars($fname_user) ?>" disabled>
             </div>
             <br>
 
             <div>
-            Last Name :
+            <p>Last Name :</p>
             <input id="lname" name="l_name" value="<?php echo htmlspecialchars($lname_user) ?>" disabled>
             </div>
             <br>
 
             <div>
-            Mail :
+            <p>Mail :</p>
             <input id="email" name="mail_user" value="<?php echo htmlspecialchars($mail_user) ?>" disabled>
             </div>
             <br>
             
             <div>
-            Language :
+            <p>Language :</p>
             <input id="userlang" name="user_lang" value="<?php echo htmlspecialchars($lang_user) ?>" disabled>
             </div>
             <br>
 
             <div>
-            University :
+            <p>University :</p>
             <input id="univuser" name="univ_user" value="<?php echo htmlspecialchars($univ_user) ?>" disabled>
             </div>
             <br>
 
             <div>
-            Description :
+            <p>Description :</p>
             <br>
             <textarea id="statutsuser" name="statuts_user" disabled><?php echo htmlspecialchars($statuts_user) ?></textarea>
             </div>

@@ -38,22 +38,22 @@ $lang_user = $_SESSION['lang_user'];
         <form action="" method="post">
 
             <div>
-            First Name :
+            <p>First Name :</p>
             <input type="text" name="fname_user" value="<?php echo htmlspecialchars($fname_user) ?>" required="required">
             </div><br>
 
             <div>
-            Last Name :
+            <p>Last Name :</p>
             <input type="text" name="lname_user" value="<?php echo htmlspecialchars($lname_user) ?>" required="required">
             </div><br>
 
             <div>
-            Mail :
+            <p>Mail :</p>
             <input id="email" type="email" name="mail_user" value="<?php echo htmlspecialchars($mail_user) ?>" required="required">
             </div><br>
 
             <div>
-            Language :
+            <p>Language :</p>
             <select name="lang_user" required="required">
                 <option disabled>Select your first language</option>
                 <option value=1 <?php if ($id_lang_user == 1) echo "selected"; ?>>English</option>
@@ -68,12 +68,12 @@ $lang_user = $_SESSION['lang_user'];
             </div><br>
 
             <div>
-            University :
+            <p>University :</p>
             <input type="text" name="univ_user" value="<?php echo htmlspecialchars($univ_user) ?>" required="required">
             </div><br>
 
             <div>
-            Description :
+            <p>Description :</p>
             <br>
             <textarea id="statutsuser" name="statuts_user" required="required"><?php echo htmlspecialchars($statuts_user) ?></textarea>
             </div>

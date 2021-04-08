@@ -1,5 +1,5 @@
 <?php
-require '../../Model/session_util.php';
+require 'session_util.php';
 
 if (isset($_POST['logout']))
 {

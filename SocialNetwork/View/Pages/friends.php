@@ -35,14 +35,14 @@ require '../../Controller/discover_friends/add_friend.php';
         
     </head>
     <body>
-        <div id="menufond">
+        <nav id="menufond">
         <ul id="menu">
             <li><a href="homepage.php">Homepage</a></li>
             <li><a href="profile.php">Profile</a></li>
             <li><a href="friends.php">Friends</a></li>
             <li><a href="logout.php">Log Out</a></li>
         </ul>
-        </div>
+        </nav>
         
         <form class="friend1" action="../../Controller/discover_friends/confirm_req/confirm_req1.php" method="post">
             <div>

@@ -36,7 +36,7 @@ if ($is_logged == false)
             <li><a href="homepage.php">Homepage</a></li>
             <li><a href="profile.php">Profile</a></li>
             <li><a href="friends.php">Friends</a></li>
-            <li><a href=<?php include ("../../Model/logout.php"); ?>>Log Out</a></li>
+            <li><a href="logout.php?">Log out</a></li>
         </ul>
         </div>
         <p>Vous êtes sur la homepage</p>

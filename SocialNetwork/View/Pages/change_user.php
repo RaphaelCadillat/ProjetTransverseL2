@@ -27,7 +27,7 @@ $lang_user = $_SESSION['lang_user'];
             <li><a href="homepage.php">Homepage</a></li>
             <li><a href="profile.php">Profile</a></li>
             <li><a href="friends.php">Friends</a></li>
-            <li><a href="#">Log Out</a></li>
+            <li><?php  echo'<a href="logout.php" >Log out</a>'; ?></li>
         </ul>
         </div>
         <p>Please complete all fields!</p>

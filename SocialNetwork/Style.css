@@ -74,3 +74,8 @@
     left : 81%;
     top : 70%;
 }
+
+form{
+    background-color:silver;
+    box-shadow: 2px 2px 2px solid grey;
+}

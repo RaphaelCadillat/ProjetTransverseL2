@@ -1,5 +1,4 @@
 /*
-
 #friends
 {
     position: absolute;
@@ -98,9 +97,26 @@
 	position:relative;  /* utilse pour l'affichage du point */	
 }
 
+#menu button{
+	display: block;
+	line-height: 46px;
+    text-align: center;
+	text-decoration : none;
+	background: linear-gradient(#7cb7ff, #1b81ff);
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+	transition : text-shadow,color 1s;
+	position:relative;  /* utilse pour l'affichage du point */	
+}
+
 #menu a:hover{
 	background: rgba(255,255,255,0.1);
 	border-bottom: solid 4px rgba(255,255,255,0.8);
 }
+
+#menu button:hover{
+	background: rgba(255,255,255,0.1);
+	border-bottom: solid 4px rgba(255,255,255,0.8);
+}
+
 
 

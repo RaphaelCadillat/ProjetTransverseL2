@@ -14,6 +14,8 @@ $id_lang_user = $_SESSION['id_lang_user'];
 $lang_user = $_SESSION['lang_user'];
 
 $is_logged = is_logged($mail_user, $hash_user);
+
+
 if ($is_logged == false)
 {
     echo "<script>window.open('../../index.php','_self')</script>";

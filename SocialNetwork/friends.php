@@ -9,10 +9,7 @@
         <form action="friends.php">
             <button id="friends" name="friends" type="submit"> Friends </button>
         </form>
-        <form action="" method="post">
-            <button name="logout" id="logout" action="">Log out</button><br>
-            <?php include ("logout.php"); ?>
-        </form>
+        <a href="log out.php">Log out</a>
         <br>
         <title>Social Network</title>
         

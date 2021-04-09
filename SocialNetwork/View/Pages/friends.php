@@ -35,15 +35,7 @@ require '../../Controller/discover_friends/add_friend.php';
         
     </head>
     <body>
-        <nav id="menufond">
-        <ul id="menu">
-            <li><a href="homepage.php">Homepage</a></li>
-            <li><a href="profile.php">Profile</a></li>
-            <li><a href="friends.php">Friends</a></li>
-            <li><a href="logout.php">Log Out</a></li>
-        </ul>
-        </nav>
-        
+        <?php include('navigation_bar.php') ?>
         <form class="friend1" action="../../Controller/discover_friends/confirm_req/confirm_req1.php" method="post">
             <div>
             <input id="fname" name="f_name1" value="<?php echo htmlspecialchars($fname_user1) ?>" disabled>

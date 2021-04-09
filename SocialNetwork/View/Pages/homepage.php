@@ -31,14 +31,7 @@ if ($is_logged == false)
     </head>
 
     <body>
-        <nav id="menufond">
-        <ul id="menu">
-            <li><a href="homepage.php">Homepage</a></li>
-            <li><a href="profile.php">Profile</a></li>
-            <li><a href="friends.php">Friends</a></li>
-            <li><a href="logout.php?">Log out</a></li>
-        </ul>
-        </nav>
+        <?php include('navigation_bar.php') ?>
         <p>Vous êtes sur la homepage</p>
         <div class= "lienhypertext">
         <a href="profile.php">Voulez vous modifier votre compte ?</a><br><br>

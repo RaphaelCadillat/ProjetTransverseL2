@@ -1,5 +1,9 @@
 <?php
 include("Model/index_next.php");
+require 'Model/session_util.php';
+ini_php_session();
+free_php_session();
+
 ?>
 <!DOCTYPE html>
 <html>

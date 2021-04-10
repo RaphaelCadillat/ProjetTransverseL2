@@ -31,6 +31,7 @@ require '../../Controller/discover_friends/add_friend.php';
 <html>
     <head>
         <meta charset = "utf-8" />
+        <link rel="stylesheet" href="../Styles/Style.css" />
         <title>Social Network</title>
         
     </head>
@@ -144,7 +145,7 @@ require '../../Controller/discover_friends/add_friend.php';
        
 
         
-        <form action="friends.php" method="post">
+        <form action="homepage.php" method="post">
 
             <button id="refresh" name="refresh" type="submit" >Refresh</button>
 

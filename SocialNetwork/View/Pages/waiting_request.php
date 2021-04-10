@@ -23,7 +23,6 @@ if ($is_logged == false)
 }
 ?>
 
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -45,7 +44,7 @@ if ($is_logged == false)
             //Preparation des requetes PDO
             $PDO = new PDO($DB_DSN,$DB_USER,$DB_PASS);
 
-            $relfriends = $PDO->prepare("SELECT * FROM req_friends WHERE id_req_from = :username_1 OR id_req_to = :username_2");
+            $relfriends = $PDO->prepare("SELECT * FROM req_friends WHERE id_req_from = :username_1 OR id_req_to = :username_2");  //id_from id_to 1 -> 0
             $relfriends->execute([
                 "username_1" => $id_user,
                 "username_2" => $id_user
@@ -57,36 +56,42 @@ if ($is_logged == false)
             echo 'ERREUR : '.$pe->getMessage();
         }
         ?>
-        <!-- html liste d'amis -->
+        <!-- html liste d'attente -->
 
         <?php
+        //demande envoyé
         for($i=0;$i<sizeof($data_relfriends);$i++){
-            if($data_relfriends[$i]['id_req_from'] == $id_user && $data_relfriends[$i]['req_statuts'] == 0){
+            if($data_relfriends[$i]['id_req_from'] == $id_user && $data_relfriends[$i]['req_statuts'] == 1){
 
-                $print_username_friend = $PDO->prepare("SELECT * FROM user_table WHERE id_user = :id_user");
-                $print_username_friend->execute([
+                $print_waiting_friend = $PDO->prepare("SELECT * FROM user_table WHERE id_user = :id_user");
+                $print_waiting_friend->execute([
                     "id_user" => $data_relfriends[$i]['id_req_to']
                 ]);
-                $username_friend = $print_username_friend->fetch();
-
+                $username_wait_friend = $print_waiting_friend->fetch();
+                
                 $id_req = $data_relfriends[$i]['id_req'];
-                echo '<p class="friends">'.$username_friend["fname_user"]." ".$username_friend["lname_user"].'</p>';
-                echo "<a href='../../Controller/supp_friend.php?id_req=".$id_req."'>Delete</a>";
+
+                echo '<p class="w_req_from_user">'.$username_wait_friend['fname_user']." ".$username_wait_friend['lname_user'].'</p>';
+                echo "<a href='../../Controller/supp_friend.php?id_req=".$id_req."'>Cancel</a>";
             }
+            
+        }
+        //demande reçue
+        for($i=0;$i<sizeof($data_relfriends);$i++){
+            if($data_relfriends[$i]['id_req_to'] == $id_user && $data_relfriends[$i]['req_statuts'] == 1){
 
-            if( $data_relfriends[$i]['id_req_to'] == $id_user && $data_relfriends[$i]['req_statuts'] == 0){
-
-                $print_username_friend = $PDO->prepare("SELECT * FROM user_table WHERE id_user = :id_user");
-                $print_username_friend->execute([
+                $print_receive_friend = $PDO->prepare("SELECT * FROM user_table WHERE id_user = :id_user");
+                $print_receive_friend->execute([
                     "id_user" => $data_relfriends[$i]['id_req_from']
                 ]);
-                $username_friend = $print_username_friend->fetch();
+                $username_receive_friend = $print_receive_friend->fetch();
+
+                echo '<p class="w_req_to_user">'.$username_receive_friend['fname_user']." ".$username_receive_friend['lname_user'].'</p>';
                 $id_req = $data_relfriends[$i]['id_req'];
-                echo '<p class="friends">'.$username_friend["fname_user"]." ".$username_friend["lname_user"].'</p>';
-                echo "<a href='../../Controller/supp_friend.php?id_req=".$id_req."'>Delete</a>";
-            }
+                echo "<a href='../../Controller/accept_freq.php?id_req=".$id_req."'>Accept</a>";
+                echo "<a href='../../Controller/supp_friend.php?id_req=".$id_req."'>Decline</a>";
+            }     
         }
         ?>
-        <a href="waiting_request.php">waiting friend request</a>
     </body>
 </html>

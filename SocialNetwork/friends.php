@@ -26,7 +26,7 @@
         <form class="friend" id="friend1" action="" method="post">
 
             <div><br><br>
-                <img src="pp.png" alt="photo de profil">
+                <img src="image/pp.png" alt="photo de profil">
             <input id="fname" name="f_name" value="Fname" disabled>
             </div>
             <br>
@@ -63,7 +63,7 @@
         <form class="friend" id="friend2" action="" method="post">
 
             <div><br><br>
-                 <img src="pp.png" alt="photo de profil">
+            <img src="image/pp.png" alt="photo de profil">
             <input id="fname" name="f_name" value="Fname" disabled>
             </div>
             <br>
@@ -99,7 +99,7 @@
         <form class="friend" id="friend3" action="" method="post">
 
             <div><br><br>
-                 <img src="img/pp.png" alt="photo de profil">
+            <img src="image/pp.png" alt="photo de profil">
             <input id="fname" name="f_name" value="Fname" disabled>
             </div>
             <br>

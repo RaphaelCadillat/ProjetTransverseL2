@@ -29,14 +29,10 @@ if ($is_logged == false)
         <meta charset = "utf-8" />
         <link rel="stylesheet" href="../Styles/Style.css" />
         <title>Social Network</title>
-        <link rel="stylesheet"href="../Styles/homepage.css" />
     </head>
 
     <body>
         <?php include('navigation_bar.php') ?>
-        <p>Vous êtes sur la homepage</p>
-        <div class= "lienhypertext">
-        <a href="profile.php">Voulez vous modifier votre compte ?</a><br><br>
-        </div>
+        
     </body>
 </html>

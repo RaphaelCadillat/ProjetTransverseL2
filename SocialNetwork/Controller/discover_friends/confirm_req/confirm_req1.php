@@ -40,7 +40,7 @@ else{
     </head>
 
     <body>
-        <form action="../../../View/Pages/friends.php" method="post">
+        <form action="../../../View/Pages/homepage.php" method="post">
             <button type="submit">nice</button>
         </form>
     </body>

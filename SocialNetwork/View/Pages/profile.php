@@ -1,5 +1,5 @@
 <?php
-require 'session_util.php';
+require '../../Model/session_util.php';
 ini_php_session();
 $id_user = $_SESSION['id_user'];
 $id_admin = $_SESSION['id_admin'];
@@ -13,65 +13,61 @@ $hash_user = $_SESSION['password_user'];
 $id_lang_user = $_SESSION['id_lang_user'];
 $lang_user = $_SESSION['lang_user'];
 
-include("delete_user.php");
+$is_logged = is_logged($mail_user, $hash_user);
+if ($is_logged == false)
+{
+    echo "<script>window.open('../../index.php','_self')</script>";
+}
+
+include("../../Model/delete_user.php");
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset = "utf-8" />
-        <link rel="stylesheet" href="Style.css" />
-        <form action="profile.php">
-            <button id="profile" name="profile" type="submit"> Profile </button>
-        </form>
-        <form action="friends.php">
-            <button id="friends" name="friends" type="submit"> Friends </button>
-        </form>
-        <form action="" method="post">
-            <button name="logout" id="logout" action="">Log out</button><br>
-            <?php include ("logout.php"); ?>
-        </form>
-        <br>
+        <link rel="stylesheet" href="../Styles/Style.css" />
         <title>Social Network</title>
         
     </head>
     <body>
+        <?php include('navigation_bar.php') ?>
         <p>This is your profile !</p>
 
         <form action="" method="post">
 
             <div>
-            First Name :
+            <p>First Name :</p>
             <input id="fname" name="f_name" value="<?php echo htmlspecialchars($fname_user) ?>" disabled>
             </div>
             <br>
 
             <div>
-            Last Name :
+            <p>Last Name :</p>
             <input id="lname" name="l_name" value="<?php echo htmlspecialchars($lname_user) ?>" disabled>
             </div>
             <br>
 
             <div>
-            Mail :
+            <p>Mail :</p>
             <input id="email" name="mail_user" value="<?php echo htmlspecialchars($mail_user) ?>" disabled>
             </div>
             <br>
             
             <div>
-            Language :
+            <p>Language :</p>
             <input id="userlang" name="user_lang" value="<?php echo htmlspecialchars($lang_user) ?>" disabled>
             </div>
             <br>
 
             <div>
-            University :
+            <p>University :</p>
             <input id="univuser" name="univ_user" value="<?php echo htmlspecialchars($univ_user) ?>" disabled>
             </div>
             <br>
 
             <div>
-            Description :
+            <p>Description :</p>
             <br>
             <textarea id="statutsuser" name="statuts_user" disabled><?php echo htmlspecialchars($statuts_user) ?></textarea>
             </div>
@@ -86,9 +82,6 @@ include("delete_user.php");
             <button id="suppr_user" name="suppr_user" type="submit">Delete your profile </button>
             </div>
             <br>
-            
-            
-            <button id="homepage" name="homepage" type="submit" formaction="homepage.php">Homepage</button>
 
         </form>
 

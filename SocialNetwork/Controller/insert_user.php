@@ -1,6 +1,6 @@
 <?php 
 
-require 'Model/connection.php';
+require '../../Model/connection.php';
 
 try{
     $option = [

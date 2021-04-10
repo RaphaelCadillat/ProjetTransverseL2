@@ -29,19 +29,20 @@ if ($is_logged == false)
         <form action="profile.php">
             <button id="profile" name="profile" type="submit"> Profile </button>
         </form>
+        <div class="friend_button">
         <form action="friends.php">
             <button id="friends" name="friends" type="submit"> Friends </button>
         </form>
         <a href="logout.php">Log out</a>
         <br>
         <title>Social Network</title>
-        
+        <link rel="stylesheet"href="homepage.css" />
     </head>
 
     <body>
-        <p>Vous etes sur la homepage</p>
-        
+        <p>Vous êtes sur la homepage</p>
+        <div class= "lienhypertext">
         <a href="profile.php">Voulez vous modifier votre compte ?</a><br><br>
-
+        </div>
     </body>
 </html>

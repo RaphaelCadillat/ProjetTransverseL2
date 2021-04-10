@@ -1,5 +1,5 @@
 <?php
-require 'Model/connection.php';
+require '../../Model/connection.php';
 //require 'session_util.php';
 
 try{

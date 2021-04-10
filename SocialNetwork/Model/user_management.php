@@ -10,7 +10,7 @@
 
 function delete_user($id_user)
 {
-    require 'Model\connection.php';
+    require 'connection.php';
     try{
         $option = [
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
@@ -32,7 +32,7 @@ function delete_user($id_user)
 
 function delete_rel_lang_user($id_user)
 {
-    require 'Model\connection.php';
+    require 'connection.php';
     try{
         $option = [
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
@@ -54,7 +54,7 @@ function delete_rel_lang_user($id_user)
 
 function delete_friend_user($id_user)
 {
-    require 'Model\connection.php';
+    require 'connection.php';
     try{
         $option = [
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
@@ -80,7 +80,7 @@ function delete_friend_user($id_user)
 
 function delete_req_friends($id_user)
 {
-    require 'Model\connection.php';
+    require 'connection.php';
     try{
         $option = [
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
@@ -106,7 +106,7 @@ function delete_req_friends($id_user)
 
 function delete_message($id_user)
 {
-    require 'Model\connection.php';
+    require 'connection.php';
     try{
         $option = [
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
@@ -141,6 +141,6 @@ function delete_account($id_user)
     
     require 'session_util.php';
     free_php_session();
-    header("Location: index.php");
+    header("Location: ../index.php");
 
 }

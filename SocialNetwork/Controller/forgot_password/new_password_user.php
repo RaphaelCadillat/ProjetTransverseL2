@@ -11,14 +11,14 @@
             <div>
             <input type="password" name="newpass"><br>
             <input type="submit" name="submitPassword" value="Enter"/><br>
-            <a href="signin.php">Connexion ?</a><br>
+            <a href="../../View/Pages/signin.php">Connexion ?</a><br>
             
         </form>
     </body>
 </html>
 
 <?php
-require 'Model/connection.php';
+require '../../Model/connection.php';
 
 if(isset($_GET["email"]) && isset($_GET["token"])){
     try{
@@ -60,12 +60,12 @@ if(isset($_GET["email"]) && isset($_GET["token"])){
                 $change_password->execute();
         
                 echo"<script>alert('Your password has been change')</script>";
-                echo "<script>window.open('signin.php','_self')</script>";
+                echo "<script>window.open('../../View/Pages/signin.php','_self')</script>";
             }    
         }
         else{
             echo"<script>alert('please check your link')</script>";
-            echo "<script>window.open('signin.php','_self')</script>";
+            echo "<script>window.open('../../View/Pages/signin.php','_self')</script>";
         }
     }
     catch(PDOException $pe){
@@ -73,7 +73,7 @@ if(isset($_GET["email"]) && isset($_GET["token"])){
     }
 }
 else{
-    header("Localisation: signin.php");
+    header("Localisation: ../../View/Pages/signin.php");
     exit();
 }
 ?>

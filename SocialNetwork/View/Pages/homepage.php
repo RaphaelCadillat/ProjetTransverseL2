@@ -1,5 +1,5 @@
 <?php
-require 'session_util.php';
+require '../../Model/session_util.php';
 ini_php_session();
 $id_user = $_SESSION['id_user'];
 $id_admin = $_SESSION['id_admin'];
@@ -14,9 +14,11 @@ $id_lang_user = $_SESSION['id_lang_user'];
 $lang_user = $_SESSION['lang_user'];
 
 $is_logged = is_logged($mail_user, $hash_user);
+
+
 if ($is_logged == false)
 {
-    echo "<script>window.open('index.php','_self')</script>";
+    echo "<script>window.open('../../index.php','_self')</script>";
 }
 ?>
 
@@ -25,21 +27,13 @@ if ($is_logged == false)
 <html>
     <head>
         <meta charset = "utf-8" />
-        <link rel="stylesheet" href="Style.css" />
-        <form action="profile.php">
-            <button id="profile" name="profile" type="submit"> Profile </button>
-        </form>
-        <div class="friend_button">
-        <form action="friends.php">
-            <button id="friends" name="friends" type="submit"> Friends </button>
-        </form>
-        <a href="logout.php">Log out</a>
-        <br>
+        <link rel="stylesheet" href="../Styles/Style.css" />
         <title>Social Network</title>
-        <link rel="stylesheet"href="homepage.css" />
+        <link rel="stylesheet"href="../Styles/homepage.css" />
     </head>
 
     <body>
+        <?php include('navigation_bar.php') ?>
         <p>Vous êtes sur la homepage</p>
         <div class= "lienhypertext">
         <a href="profile.php">Voulez vous modifier votre compte ?</a><br><br>

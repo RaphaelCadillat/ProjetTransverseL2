@@ -3,7 +3,14 @@
     <head>
         <meta charset = "utf-8" />
         <link rel="stylesheet" href="Style.css" />
-        <form action="profile.php">
+        
+        <title>Social Network</title>
+        
+    </head>
+    <body>
+
+        <header>
+            <form action="profile.php">
             <button id="profile" name="profile" type="submit"> Profile </button>
         </form>
         <form action="friends.php">
@@ -14,13 +21,12 @@
             <?php include ("logout.php"); ?>
         </form>
         <br>
-        <title>Social Network</title>
-        
-    </head>
-    <body>
-        <form id="friend1" action="" method="post">
+        </header>
+        <div>
+        <form class="friend" id="friend1" action="" method="post">
 
-            <div>
+            <div><br><br>
+                <img src="pp.png" alt="photo de profil">
             <input id="fname" name="f_name" value="Fname" disabled>
             </div>
             <br>
@@ -54,9 +60,10 @@
             </form>
         </form>
 
-        <form id="friend2" action="" method="post">
+        <form class="friend" id="friend2" action="" method="post">
 
-            <div>
+            <div><br><br>
+                 <img src="pp.png" alt="photo de profil">
             <input id="fname" name="f_name" value="Fname" disabled>
             </div>
             <br>
@@ -89,9 +96,10 @@
             <button id="addfriend" name="addfriend" type="submit" >Add Friend</button>
             </form>
         </form>
-        <form id="friend3" action="" method="post">
+        <form class="friend" id="friend3" action="" method="post">
 
-            <div>
+            <div><br><br>
+                 <img src="img/pp.png" alt="photo de profil">
             <input id="fname" name="f_name" value="Fname" disabled>
             </div>
             <br>
@@ -146,7 +154,7 @@
         <form action="homepage.php">
             <button id="homepage" name="homepage" type="submit" >Homepage</button>
         </form>
-        
+        </div>
 
     </body>
 </html>

@@ -31,27 +31,39 @@
 
 #friend1
 {
+    
     position: absolute;
-    left: 30px;
+    left: 3%;
+
 }
 
 #friend2
 {
     position: absolute;
-    left: 530px;
+    left: 33%;  
 }
 
 #friend3
 {
     position: absolute;
-    left: 1030px;
+    left: 63%;
+    
+}
+.friend{
+    box-shadow:5px 5px 5px solid red;
+    background-color: white;
+    width: 25%;
+    height: 65%;
+    margin-top: 40px
+
+
 }
 
 #homepage
 {   
     position: absolute;
     left: 30px;
-    top: 700px;
+    top: 85%;
 }
 
 #refresh
@@ -59,12 +71,13 @@
     position: absolute;
     height: 4%;
     left : 90%;
-    top : 70%;
+    top : 85%;
 }
 
 #addfriend
 {
-    margin-left : 60px;
+    display: block;
+    margin: auto;
 }
 
 #l_user
@@ -72,10 +85,35 @@
     position: absolute;
     height: 4%;
     left : 81%;
-    top : 70%;
+    top : 85%;
 }
 
-form{
-    background-color:silver;
-    box-shadow: 2px 2px 2px solid grey;
+input{
+    
+    display: block;
+    margin: auto;
+    border:none;
+    border-bottom: 2px solid green;
+
+}
+
+html{
+    background-image: url("image/titre.jpg");
+     width:auto;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:0;
+}
+textarea{
+
+    display: block;
+    margin: auto;    
+}
+
+img{
+    width: 100px;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
 }

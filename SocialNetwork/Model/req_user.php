@@ -24,11 +24,10 @@ function add_req_friend($id_current_user, $id_user_to_add)
         }
 
         //Ajout de la request dans la base de donnée
-        $add_req = $PDO->prepare('INSERT INTO `req_friends` (`id_req_from`, `id_req_to`, `req_statuts`, `req_notif_statuts`, `req_datetime`) VALUES (?,?,?,?,NOW())');
+        $add_req = $PDO->prepare('INSERT INTO `req_friends` (`id_req_from`, `id_req_to`, `req_statuts`, `req_datetime`) VALUES (?,?,?,NOW())');
         $add_req->bindValue(1, $id_current_user);
         $add_req->bindValue(2, $id_user_to_add);
-        $add_req->bindValue(3, 'pending');
-        $add_req->bindValue(4, 'no');
+        $add_req->bindValue(3, 1);
         $add_req->execute();
 
         return true;

@@ -7,7 +7,7 @@
                 0px -3px 0px 1px rgba(0, 0, 0, 0.1) inset;
     overflow : hidden;
 	margin-top: 50px;
-	margin-left: 180px;
+	margin-left: 150px;
     height : 50px;
 }
 
@@ -42,17 +42,6 @@
 	position:relative;  /* utilse pour l'affichage du point */	
 }
 
-#fnav button{
-	display: block;
-	line-height: 46px;
-    text-align: center;
-	text-decoration : none;
-	background: linear-gradient(#7cb7ff, #1b81ff);
-	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
-	transition : text-shadow,color 1s;
-	position:relative;  /* utilse pour l'affichage du point */	
-}
-
 #fnav a:hover{
 	background: rgba(255,255,255,0.1);
 	border-bottom: solid 4px rgba(255,255,255,0.8);
@@ -62,3 +51,61 @@
 	background: rgba(255,255,255,0.1);
 	border-bottom: solid 4px rgba(255,255,255,0.8);
 }
+
+.friend{
+	display: block;
+	height : 40px;
+	width: 120px;
+	text-align: center;
+	line-height: 40px;
+	margin-left: 40px;
+	color: #022b5a;
+	background: linear-gradient(#9bc4f7, #80b5f5);
+}
+
+.message_friend{
+	display: block;
+	height : 40px;
+	width: 30px;
+	text-align: center;
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+	line-height: 40px;
+	color : white;
+	background: linear-gradient(#f9fc5c, #f1f50d);
+}
+
+.cancel{
+	display: block;
+	height : 40px;
+	width: 60px;
+	text-align: center;
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+	line-height: 40px;
+	color : white;
+	background: linear-gradient(#fc5c5c, #f50d0d);
+}
+
+.accept{
+	display: block;
+	height : 40px;
+	width: 60px;
+	text-align: center;
+	line-height: 40px;
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+	color : white;
+	background: linear-gradient(#69f856, #0df50d);
+}
+
+.decline{
+	display: block;
+	height : 40px;
+	width: 60px;
+	text-align: center;
+	line-height: 40px;
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+	color : white;
+	background: linear-gradient(#f89256, #f54f0d);
+}
+
+
+

@@ -1,4 +1,6 @@
+
 <?php
+
 require '../../Model/session_util.php';
 ini_php_session();
 $id_user = $_SESSION['id_user'];
@@ -13,15 +15,17 @@ $hash_user = $_SESSION['password_user'];
 $id_lang_user = $_SESSION['id_lang_user'];
 $lang_user = $_SESSION['lang_user'];
 
+
 $is_logged = is_logged($mail_user, $hash_user);
-
-
 if ($is_logged == false)
 {
     echo "<script>window.open('../../index.php','_self')</script>";
 }
-?>
 
+require '../../Controller/discover_friends/print_friend.php';
+require '../../Controller/discover_friends/add_friend.php';
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -30,7 +34,6 @@ if ($is_logged == false)
         <link rel="stylesheet" href="../Styles/Style.css" />
         <title>Social Network</title>
     </head>
-
     <body>
         <?php include('navigation_bar.php') ?>
         

@@ -28,6 +28,7 @@ if ($is_logged == false)
     <head>
         <meta charset = "utf-8" />
         <link rel="stylesheet" href="../Styles/Style.css" />
+        <link rel="stylesheet" href="../Styles/navbar_friends.css" />
         <title>Social Network</title>
     </head>
 
@@ -56,6 +57,14 @@ if ($is_logged == false)
             echo 'ERREUR : '.$pe->getMessage();
         }
         ?>
+        <nav id="friendnav">
+            <ul id="fnav">
+                <li><a href="friends.php">Amis</a></li>
+                <li><a href="waiting_request.php">Demande en attente</a></li>
+                <li><a href="friends.php">Rechercher un ami</a></li>
+            </ul>
+        </nav>
+        <br>
         <!-- html liste d'attente -->
 
         <?php

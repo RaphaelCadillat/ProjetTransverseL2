@@ -29,20 +29,11 @@ if ($is_logged == false)
     <head>
         <meta charset = "utf-8" />
         <link rel="stylesheet" href="../Styles/Style.css" />
+        <link rel="stylesheet" href="../Styles/navbar_friends.css" />
         <title>Social Network</title>
     </head>
 
     <body>
-        <nav id="friendnav">
-            <ul id="fnav">
-                <li><a href="homepage.php">Homepage</a></li>
-                <li><a href="profile.php">Profile</a></li>
-                <li><a href="friends.php">Friends</a></li>
-                <li><a href="../../Model/logout.php">Log out</a></li>
-            </ul>
-        </nav>
-        <br>
-
         <?php include('navigation_bar.php');
         try{
             $option = [
@@ -66,7 +57,17 @@ if ($is_logged == false)
             echo 'ERREUR : '.$pe->getMessage();
         }
         ?>
+        <nav id="friendnav">
+            <ul id="fnav">
+                <li><a href="friends.php">Amis</a></li>
+                <li><a href="waiting_request.php">Demande en attente</a></li>
+                <li><a href="friends.php">Rechercher un ami</a></li>
+            </ul>
+        </nav>
+        <br>
+
         <!-- html liste d'amis -->
+
 
         <?php
         for($i=0;$i<sizeof($data_relfriends);$i++){
@@ -96,6 +97,5 @@ if ($is_logged == false)
             }
         }
         ?>
-        <a href="waiting_request.php">waiting friend request</a>
     </body>
 </html>

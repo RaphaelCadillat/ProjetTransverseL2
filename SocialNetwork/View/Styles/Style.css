@@ -118,5 +118,67 @@
 	border-bottom: solid 4px rgba(255,255,255,0.8);
 }
 
+#friendnav{
+    width: 100%;
+    background: linear-gradient(#38475a, #226cc7);
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2),
+                0px 1px 0px 1px rgba(255, 255, 255, 0.5) inset,
+                0px -3px 0px 1px rgba(0, 0, 0, 0.1) inset;
+    overflow : hidden;
+    height : 50px;
+}
+
+#fnav{
+	font-family: "Trebuchet MS";
+    display: table;
+	margin-right : 0;
+	margin-left : auto;
+	margin-top : 450;
+	padding : 0;
+}
+
+#fnav li{
+    display: table-cell;
+	width: 90px;
+	transition:1s;
+}
+
+#menuf li:hover{
+	width:90px;
+	transition:1s;
+}
+
+#fnav a{
+	display: block;
+	line-height: 46px;
+    text-align: center;
+	text-decoration : none;
+	color : white;
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+	transition : text-shadow,color 1s;
+	position:relative;  /* utilse pour l'affichage du point */	
+}
+
+#fnav button{
+	display: block;
+	line-height: 46px;
+    text-align: center;
+	text-decoration : none;
+	background: linear-gradient(#7cb7ff, #1b81ff);
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+	transition : text-shadow,color 1s;
+	position:relative;  /* utilse pour l'affichage du point */	
+}
+
+#fnav a:hover{
+	background: rgba(255,255,255,0.1);
+	border-bottom: solid 4px rgba(255,255,255,0.8);
+}
+
+#fnav button:hover{
+	background: rgba(255,255,255,0.1);
+	border-bottom: solid 4px rgba(255,255,255,0.8);
+}
 
 

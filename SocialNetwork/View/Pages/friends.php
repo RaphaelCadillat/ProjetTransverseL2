@@ -33,8 +33,17 @@ if ($is_logged == false)
     </head>
 
     <body>
+        <nav id="friendnav">
+            <ul id="fnav">
+                <li><a href="homepage.php">Homepage</a></li>
+                <li><a href="profile.php">Profile</a></li>
+                <li><a href="friends.php">Friends</a></li>
+                <li><a href="../../Model/logout.php">Log out</a></li>
+            </ul>
+        </nav>
+        <br>
+
         <?php include('navigation_bar.php');
-        
         try{
             $option = [
                 PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',

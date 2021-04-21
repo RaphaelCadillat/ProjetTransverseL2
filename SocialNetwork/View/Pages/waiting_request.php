@@ -27,8 +27,8 @@ if ($is_logged == false)
 <html>
     <head>
         <meta charset = "utf-8" />
-        <link rel="stylesheet" href="../Styles/Style.css" />
         <link rel="stylesheet" href="../Styles/friends.css" />
+        <link rel="stylesheet" href="../Styles/Style.css" />
         <title>Social Network</title>
     </head>
 
@@ -89,7 +89,7 @@ if ($is_logged == false)
         ?>
         <p>Demande reçue</p>
         <br>
-        <?
+        <?php
         //demande reçue
         for($i=0;$i<sizeof($data_relfriends);$i++){
             if($data_relfriends[$i]['id_req_to'] == $id_user && $data_relfriends[$i]['req_statuts'] == 1){

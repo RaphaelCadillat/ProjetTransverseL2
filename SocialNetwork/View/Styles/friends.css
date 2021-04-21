@@ -52,26 +52,26 @@
 	border-bottom: solid 4px rgba(255,255,255,0.8);
 }
 
-.friend{
+.friends{
 	display: block;
 	height : 40px;
 	width: 120px;
 	text-align: center;
-	line-height: 40px;
-	margin-left: 40px;
 	color: #022b5a;
 	background: linear-gradient(#9bc4f7, #80b5f5);
+	text-decoration:none;
 }
 
 .message_friend{
 	display: block;
 	height : 40px;
-	width: 30px;
+	width: 80px;
 	text-align: center;
 	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
-	line-height: 40px;
-	color : white;
+	margin-left: 40px;
+	color : rgb(182, 182, 182);
 	background: linear-gradient(#f9fc5c, #f1f50d);
+	text-decoration:none;
 }
 
 .cancel{
@@ -80,9 +80,9 @@
 	width: 60px;
 	text-align: center;
 	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
-	line-height: 40px;
 	color : white;
 	background: linear-gradient(#fc5c5c, #f50d0d);
+	text-decoration:none;
 }
 
 .accept{
@@ -90,10 +90,10 @@
 	height : 40px;
 	width: 60px;
 	text-align: center;
-	line-height: 40px;
 	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
 	color : white;
 	background: linear-gradient(#69f856, #0df50d);
+	text-decoration:none;
 }
 
 .decline{
@@ -101,11 +101,21 @@
 	height : 40px;
 	width: 60px;
 	text-align: center;
-	line-height: 40px;
 	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
 	color : white;
 	background: linear-gradient(#f89256, #f54f0d);
+	text-decoration:none;
 }
 
+.delete{
+	display: block;
+	height : 40px;
+	width: 60px;
+	text-align: center;
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+	color : white;
+	background: linear-gradient(#f89256, #f54f0d);
+	text-decoration:none;
+}
 
 

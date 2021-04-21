@@ -28,8 +28,8 @@ if ($is_logged == false)
 <html>
     <head>
         <meta charset = "utf-8" />
-        <link rel="stylesheet" href="../Styles/Style.css" />
         <link rel="stylesheet" href="../Styles/friends.css" />
+        <link rel="stylesheet" href="../Styles/Style.css" />
         <title>Social Network</title>
     </head>
 
@@ -67,36 +67,35 @@ if ($is_logged == false)
         <br>
 
         <!-- html liste d'amis -->
-        <div class=list_friends>
-            <?php
-            for($i=0;$i<sizeof($data_relfriends);$i++){
-                if($data_relfriends[$i]['id_req_from'] == $id_user && $data_relfriends[$i]['req_statuts'] == 0){
+        <?php
+        for($i=0;$i<sizeof($data_relfriends);$i++){
+            if($data_relfriends[$i]['id_req_from'] == $id_user && $data_relfriends[$i]['req_statuts'] == 0){
 
-                    $print_username_friend = $PDO->prepare("SELECT * FROM user_table WHERE id_user = :id_user");
-                    $print_username_friend->execute([
-                        "id_user" => $data_relfriends[$i]['id_req_to']
-                    ]);
-                    $username_friend = $print_username_friend->fetch();
+                $print_username_friend = $PDO->prepare("SELECT * FROM user_table WHERE id_user = :id_user");
+                $print_username_friend->execute([
+                    "id_user" => $data_relfriends[$i]['id_req_to']
+                ]);
+                $username_friend = $print_username_friend->fetch();
 
-                    $id_req = $data_relfriends[$i]['id_req'];
-                    echo '<p class="friends">'.$username_friend["fname_user"]." ".$username_friend["lname_user"].'</p>';
-                    echo "<a href='../../Controller/supp_friend.php?id_req=".$id_req."'>Delete</a>";
-                }
-
-                if( $data_relfriends[$i]['id_req_to'] == $id_user && $data_relfriends[$i]['req_statuts'] == 0){
-
-                    $print_username_friend = $PDO->prepare("SELECT * FROM user_table WHERE id_user = :id_user");
-                    $print_username_friend->execute([
-                        "id_user" => $data_relfriends[$i]['id_req_from']
-                    ]);
-                    $username_friend = $print_username_friend->fetch();
-                    $id_req = $data_relfriends[$i]['id_req'];
-                    echo '<p class="friends">'.$username_friend["fname_user"]." ".$username_friend["lname_user"].'</p>';
-                    echo '<input type="button" class="message_friend" value="+">';
-                    echo "<a href='../../Controller/supp_friend.php?id_req=".$id_req."'>Delete</a>";
-                }
+                $id_req = $data_relfriends[$i]['id_req'];
+                echo '<p class="friends">'.$username_friend["fname_user"]." ".$username_friend["lname_user"].'</p>';
+                echo '<input type="button" class="message_friend" value=" message ">';
+                echo "<a class='delete' href='../../Controller/supp_friend.php?id_req=".$id_req."'>Delete</a>";
             }
-            ?>
-        </div>
+
+            if( $data_relfriends[$i]['id_req_to'] == $id_user && $data_relfriends[$i]['req_statuts'] == 0){
+
+                $print_username_friend = $PDO->prepare("SELECT * FROM user_table WHERE id_user = :id_user");
+                $print_username_friend->execute([
+                    "id_user" => $data_relfriends[$i]['id_req_from']
+                ]);
+                $username_friend = $print_username_friend->fetch();
+                $id_req = $data_relfriends[$i]['id_req'];
+                echo '<p class="friends">'.$username_friend["fname_user"]." ".$username_friend["lname_user"].'</p>';
+                echo '<input type="button" class="message_friend" value=" message ">';
+                echo "<a class='delete' href='../../Controller/supp_friend.php?id_req=".$id_req."'>Delete</a>";
+            }
+        }
+        ?>
     </body>
 </html>

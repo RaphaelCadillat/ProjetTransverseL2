@@ -13,7 +13,7 @@
             <ul id="enav">
                 <li><a href="create_event.php">Créer un event</a></li>
                 <li><a href="list_event.php">Tous les events</a></li>
-                <li><a href="friends_event.php">Rechercher un event d'un ami</a></li>
+                <li><a href="friends_event.php">Event des amis</a></li>
             </ul>
         </nav>
         <br>
@@ -22,6 +22,12 @@
             <div>
             <p>Event Name :</p>
             <input id="eventname" name="event_name" value="" disabled>
+            </div>
+            <br>
+
+            <div>
+            <p>Date de l'event :</p>
+            <input type="datetime-local" id="eventdate" name="event_date" disabled>
             </div>
             <br>
 

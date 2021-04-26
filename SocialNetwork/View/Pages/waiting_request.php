@@ -27,6 +27,7 @@ if ($is_logged == false)
 <html>
     <head>
         <meta charset = "utf-8" />
+        <link rel="stylesheet" href="../Styles/friends.css" />
         <link rel="stylesheet" href="../Styles/Style.css" />
         <title>Social Network</title>
     </head>
@@ -56,8 +57,17 @@ if ($is_logged == false)
             echo 'ERREUR : '.$pe->getMessage();
         }
         ?>
+        <nav id="friendnav">
+            <ul id="fnav">
+                <li><a href="friends.php">Amis</a></li>
+                <li><a href="waiting_request.php">Demande en attente</a></li>
+                <li><a href="friends.php">Rechercher un ami</a></li>
+            </ul>
+        </nav>
+        <br>
         <!-- html liste d'attente -->
-
+        <p>Demande envoyé</p>
+        <br>
         <?php
         //demande envoyé
         for($i=0;$i<sizeof($data_relfriends);$i++){
@@ -71,11 +81,15 @@ if ($is_logged == false)
                 
                 $id_req = $data_relfriends[$i]['id_req'];
 
-                echo '<p class="w_req_from_user">'.$username_wait_friend['fname_user']." ".$username_wait_friend['lname_user'].'</p>';
-                echo "<a href='../../Controller/supp_friend.php?id_req=".$id_req."'>Cancel</a>";
+                echo '<p class="friends">'.$username_wait_friend['fname_user']." ".$username_wait_friend['lname_user'].'</p>';
+                echo "<a class='cancel' href='../../Controller/supp_friend.php?id_req=".$id_req."'>Cancel</a>";
             }
             
         }
+        ?>
+        <p>Demande reçue</p>
+        <br>
+        <?php
         //demande reçue
         for($i=0;$i<sizeof($data_relfriends);$i++){
             if($data_relfriends[$i]['id_req_to'] == $id_user && $data_relfriends[$i]['req_statuts'] == 1){
@@ -86,10 +100,10 @@ if ($is_logged == false)
                 ]);
                 $username_receive_friend = $print_receive_friend->fetch();
 
-                echo '<p class="w_req_to_user">'.$username_receive_friend['fname_user']." ".$username_receive_friend['lname_user'].'</p>';
+                echo '<p class="friends">'.$username_receive_friend['fname_user']." ".$username_receive_friend['lname_user'].'</p>';
                 $id_req = $data_relfriends[$i]['id_req'];
-                echo "<a href='../../Controller/accept_freq.php?id_req=".$id_req."'>Accept</a>";
-                echo "<a href='../../Controller/supp_friend.php?id_req=".$id_req."'>Decline</a>";
+                echo "<a class='accept' href='../../Controller/accept_freq.php?id_req=".$id_req."'>Accept</a>";
+                echo "<a class='decline' href='../../Controller/supp_friend.php?id_req=".$id_req."'>Decline</a>";
             }     
         }
         ?>

@@ -1,5 +1,5 @@
 <?php
-require 'session_util.php';
+require '../../Model/session_util.php';
 ini_php_session();
 $id_user = $_SESSION['id_user'];
 $id_admin = $_SESSION['id_admin'];
@@ -18,42 +18,31 @@ $lang_user = $_SESSION['lang_user'];
 <html>
     <head>
         <meta charset = "utf-8" />
-        <link rel="stylesheet" href="Style.css" />
-        <form action="profile.php">
-            <button id="profile" name="profile" type="submit"> Profile </button>
-        </form>
-        <form action="friends.php">
-            <button id="friends" name="friends" type="submit"> Friends </button>
-        </form>
-        <form action="" method="post">
-            <button name="logout" id="logout" action="">Log out</button><br>
-            <?php include ("logout.php"); ?>
-        </form>
-        <br>
-        <title>Social Network</title>
-        
+        <link rel="stylesheet" href="../Styles/Style.css" />
+        <title>Social Network</title>     
     </head>
     <body>
+        <?php include('navigation_bar.php') ?>
         <p>Please complete all fields!</p>
         <form action="" method="post">
 
             <div>
-            First Name :
+            <p>First Name :</p>
             <input type="text" name="fname_user" value="<?php echo htmlspecialchars($fname_user) ?>" required="required">
             </div><br>
 
             <div>
-            Last Name :
+            <p>Last Name :</p>
             <input type="text" name="lname_user" value="<?php echo htmlspecialchars($lname_user) ?>" required="required">
             </div><br>
 
             <div>
-            Mail :
+            <p>Mail :</p>
             <input id="email" type="email" name="mail_user" value="<?php echo htmlspecialchars($mail_user) ?>" required="required">
             </div><br>
 
             <div>
-            Language :
+            <p>Language :</p>
             <select name="lang_user" required="required">
                 <option disabled>Select your first language</option>
                 <option value=1 <?php if ($id_lang_user == 1) echo "selected"; ?>>English</option>
@@ -68,21 +57,19 @@ $lang_user = $_SESSION['lang_user'];
             </div><br>
 
             <div>
-            University :
+            <p>University :</p>
             <input type="text" name="univ_user" value="<?php echo htmlspecialchars($univ_user) ?>" required="required">
             </div><br>
 
             <div>
-            Description :
+            <p>Description :</p>
             <br>
             <textarea id="statutsuser" name="statuts_user" required="required"><?php echo htmlspecialchars($statuts_user) ?></textarea>
             </div>
             <br>
 
             <button id="modify" name="modify" type="submit" >Modify</button>
-            <?php include("modif_user.php"); ?>
-
-            <button id="homepage" name="homepage" type="submit" formaction="homepage.php">Homepage</button>
+            <?php include("../../Controller/modif_user.php"); ?>
 
         </form>
     </body>

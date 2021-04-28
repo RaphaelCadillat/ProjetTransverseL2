@@ -1,9 +1,15 @@
+<?php
+require '../../Model/session_util.php';
+ini_php_session();
+free_php_session();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset = "utf-8" />
         <title>Social Network</title>
-        <link rel="stylesheet"href="signup.css" />
+        <link rel="stylesheet"href="../Styles/signup.css" />
     </head>
     <body>
     <div class ="inscription">
@@ -51,7 +57,7 @@
             <a href="signin.php">Déjà inscrit ?</a><br><br>
 
             <button id="signup" name="sign_up">Sign Up</button>
-            <?php include("insert_user.php"); ?>
+            <?php include("../../Controller/insert_user.php"); ?>
         </form>
     </div>
     </body>

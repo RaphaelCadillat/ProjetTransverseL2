@@ -3,14 +3,14 @@
 if (!function_exists('ini_php_session'))
 {
     function ini_php_session() : bool
-{
-    if(!session_id())
     {
-        session_start();
-        session_regenerate_id(true);
+        if(!session_id())
+        {
+            session_start();
+            session_regenerate_id(true);
+        }
+        return false;
     }
-    return false;
-}
 }
 
 
@@ -18,7 +18,7 @@ if (!function_exists('free_php_session'))
 {
     function free_php_session() : void
     {
-        
+
         session_unset();
         session_destroy();
         session_write_close();
@@ -32,7 +32,7 @@ if (!function_exists('is_logged'))
 {
     function is_logged($email, $hash) : bool
     {
-        require 'Model/connection.php';
+        require 'connection.php';
 
         if(!$email || !$hash) //check if the session is on
         {

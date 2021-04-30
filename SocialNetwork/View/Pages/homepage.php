@@ -33,7 +33,6 @@ require '../../Controller/discover_friends/add_friend.php';
         <meta charset = "utf-8" />
         <link rel="stylesheet" href="../Styles/Style.css" />
         <title>Social Network</title>
-        
     </head>
     <body>
         <?php include('navigation_bar.php') ?>

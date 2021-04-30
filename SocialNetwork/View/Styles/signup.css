@@ -1,28 +1,37 @@
 html{
-    background-image: url("../../image/titre.jpg");
     width:auto;
     height: auto;
     background-size: cover;
+    background-color: dodgerblue;
     }
 body
 {
-    overflow : hidden;
-}
-
-button{
-    font-family:Arial, Helvetica, sans-serif;
-    color: white;
-    background-color: green;
-    font-size: 20px;
+    margin-top: 10px;
+    box-shadow: 10px 10px 10px solid black;
+    width: 60%;
+    height: 100%;
+    background-color: white;
     display: block;
-    margin:auto;
-    height: 5%;
-    width: 15%;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    border-radius: 40px 40px 40px 40px;
-}
+    margin: auto;
+    box-shadow: 10px 10px 10px solid black;
+       
+        
+    }
 
+    button{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background-color: lightgreen;
+        border-radius: 5px;
+        width: 30%;
+        border:none;
+        box-shadow: 2px 2px solid black;
+        height: 10%;
+        display: block;
+        margin: auto;
+    
+    }
+    
 p
 {
     margin-top: 20px;

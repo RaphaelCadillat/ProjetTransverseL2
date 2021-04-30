@@ -17,6 +17,7 @@
             </ul>
         </nav>
         <br>
+        <div class="body">
         <form action="" method="post">
 
             <div>
@@ -37,6 +38,6 @@
             <textarea id="descriptionevent" name="description_event"></textarea>
             </div>
             <br>
-
+</div>
     </body>
 </html>

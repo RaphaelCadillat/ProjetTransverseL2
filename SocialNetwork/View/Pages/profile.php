@@ -34,7 +34,7 @@ include("../../Model/delete_user.php");
         <?php include('navigation_bar.php') ?>
         <p>This is your profile !</p>
 
-        <form action="" method="post">
+        <form class="profil" action="" method="post">
 
             <div>
             <p>First Name :</p>
@@ -74,12 +74,12 @@ include("../../Model/delete_user.php");
             <br>
 
             <div>
-            <button id="changep" name="change_p" type="submit" formaction="change_user.php">Change your profile </button>
+            <button  class="b_profile" id="changep" name="change_p" type="submit" formaction="change_user.php">Change your profile </button>
             </div>
             <br>
 
             <div>
-            <button id="suppr_user" name="suppr_user" type="submit">Delete your profile </button>
+            <button class="b_profile" id="suppr_user" name="suppr_user" type="submit">Delete your profile </button>
             </div>
             <br>
 

@@ -41,20 +41,19 @@
 #friend1
 {
     
-    position: absolute;
     left: 3%;
 
 }
 
 #friend2
 {
-    position: absolute;
+    
     left: 33%;  
 }
 
 #friend3
 {
-    position: absolute;
+    
     left: 63%;
     
 }
@@ -107,7 +106,7 @@ input{
 }
 
 html{
-    background-image: url("image/titre.jpg");
+    background-image: url("../../image/titre.jpg");
     width:auto;
     height: auto;
     background-repeat: no-repeat;
@@ -192,5 +191,15 @@ img{
 	border-bottom: solid 4px rgba(255,255,255,0.8);
 }
 
+.profil{
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 60%;
+    height: 70%;
+}
 
-
+.b_profile{
+    display: block;
+    margin: auto;
+}

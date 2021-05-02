@@ -1,5 +1,5 @@
 #friendnav{
-    width: 41%;
+    width: 47%;
     background: linear-gradient(#38475a, #041222);
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2),
@@ -7,11 +7,12 @@
                 0px -3px 0px 1px rgba(0, 0, 0, 0.1) inset;
     overflow : hidden;
 	margin-top: 50px;
-	margin-left: 150px;
+	margin-left: 28%;
     height : 50px;
 }
 
 #fnav{
+
 	font-family: "Trebuchet MS";
     display: table;
 	margin-right : 0;
@@ -21,17 +22,20 @@
 }
 
 #fnav li{
+	
     display: table-cell;
 	width: 200px;
 	transition:1s;
 }
 
 #fnav li:hover{
+	
 	width: 200px;
 	transition:1s;
 }
 
 #fnav a{
+	
 	display: block;
 	line-height: 46px;
     text-align: center;
@@ -43,16 +47,20 @@
 }
 
 #fnav a:hover{
+	
 	background: rgba(255,255,255,0.1);
 	border-bottom: solid 4px rgba(255,255,255,0.8);
 }
 
 #fnav button:hover{
+	
 	background: rgba(255,255,255,0.1);
 	border-bottom: solid 4px rgba(255,255,255,0.8);
 }
 
 .friends{
+	font-family: "Trebuchet MS";
+	margin-left: 47%;
 	display: block;
 	height : 40px;
 	width: 120px;
@@ -63,19 +71,23 @@
 }
 
 .message_friend{
+	font-family: "Trebuchet MS";
+	margin-left: 48%;
 	display: block;
-	height : 40px;
+	height : 30px;
 	width: 80px;
 	text-align: center;
 	text-shadow: 0 0px 0 rgba(0, 0, 0, 0.4);
-	color : rgb(182, 182, 182);
-	background: linear-gradient(#f9fc5c, #f1f50d);
+	color : rgb(51, 204, 51);
+	background: linear-gradient(#9999e6, #2e2eb8);
 	text-decoration:none;
 }
 
 .cancel{
+	font-family: "Trebuchet MS";
+	margin-left: 48%;
 	display: block;
-	height : 40px;
+	height : 30px;
 	width: 60px;
 	text-align: center;
 	text-shadow: 0 0px 0 rgba(0, 0, 0, 0.4);
@@ -85,36 +97,44 @@
 }
 
 .accept{
+	font-family: "Trebuchet MS";
+	margin-left: 48%;
 	display: block;
-	height : 40px;
+	height : 30px;
 	width: 60px;
 	text-align: center;
 	text-shadow: 0 0px 0 rgba(0, 0, 0, 0.4);
-	color : white;
-	background: linear-gradient(#69f856, #0df50d);
+	color : rgb(51, 204, 51);
+	background: linear-gradient(#9999e6, #2e2eb8);
 	text-decoration:none;
 }
 
 .decline{
+	font-family: "Trebuchet MS";
+	margin-left: 48%;
 	display: block;
-	height : 40px;
-	width: 60px;
+	height : 30px;
+	width: 80px;
 	text-align: center;
 	text-shadow: 0 0px 0 rgba(0, 0, 0, 0.4);
-	color : white;
-	background: linear-gradient(#f89256, #f54f0d);
+	color : rgb(51, 204, 51);
+	background: linear-gradient(#9999e6, #2e2eb8);
 	text-decoration:none;
 }
 
 .delete{
+	font-family: "Trebuchet MS";
+	margin-left: 48%;
 	display: block;
-	height : 40px;
-	width: 60px;
+	height : 20px;
+	width: 80px;
 	text-align: center;
 	text-shadow: 0 0px 0 rgba(0, 0, 0, 0.4);
-	color : white;
-	background: linear-gradient(#f89256, #f54f0d);
+	color : rgb(51, 204, 51);
+	background: linear-gradient(#9999e6, #2e2eb8);
 	text-decoration:none;
 }
+
+
 
 

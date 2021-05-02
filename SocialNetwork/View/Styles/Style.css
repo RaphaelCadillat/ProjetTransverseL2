@@ -8,42 +8,60 @@
 
 #friend1
 {
-    position: absolute;
-    left: 30px;
+    float:right;
+    left: 10%;
 }
 
 #friend2
 {
-    position: absolute;
-    left: 530px;
+    float: right;
+    left: 30%;
 }
 
 #friend3
 {
-    position: absolute;
-    left: 1030px;
+    float: right;
+    left: 60%;
 }
 
 
+.friend{
+    margin-top: 30px;
+    background-color: white;
+    width: 20%;
+    height: 50%;
+    text-align: center;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    display: block;
+
+}
+
 #refresh
 {
-    position: absolute;
-    height: 4%;
-    left : 90%;
-    top : 70%;
+    width: 20%;
+    height: 40px;
+    left : 40%;
+    top : 80%;
+    float: inline-start;
+
+
 }
 
 #addfriend
 {
-    margin-left : 60px;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
 }
 
 #l_user
 {
-    position: absolute;
-    height: 4%;
-    left : 81%;
-    top : 70%;
+    width: 20%;
+    height: 50%;
+    left : 40%;
+    top : 80%;
+    height: 30px;
 }
 
 #menufond{
@@ -96,6 +114,109 @@
 #menu button:hover{
 	background: rgba(255,255,255,0.1);
 	border-bottom: solid 4px rgba(255,255,255,0.8);
+}
+
+
+
+input{
+    width: 50%;
+    border:none;
+    border-bottom: 2px solid green;
+    margin-bottom:10px;
+    height: 30px;
+
+}
+
+html{
+    background-color: lightblue;
+    overflow-y: none;
+    font-family: Verdana;
+    overflow: hidden;
+}
+textarea{
+
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    resize: none;
+    width: 70%;
+
+
+}
+#pp{
+    width: 100px;
+    display: block;
+    margin: auto;
+    
+
+}
+
+
+.profil{
+
+    margin: auto;
+    text-align: center;
+   
+    margin-top: 10px;
+}
+
+.b_profile{
+    display: block;
+    margin: auto;
+}
+
+.body{
+    margin-top: 10px;
+    box-shadow: 10px 10px 10px solid black;
+    width: 60%;
+    height: 100%;
+    background-color: white;
+    display: block;
+    margin: auto;
+    box-shadow: 10px 10px 10px solid black;
+    text-align: center;
+}
+
+#changep{
+    float: left;
+    margin-left: 15%;
+    
+}
+
+.inscription{
+    
+   display: block;
+    margin: auto;
+   
+    text-align: center;
+    margin-top: 10px;
+    box-shadow: 10px 10px 10px solid black;
+    height: 100%;
+}
+
+#logo{
+    height: 50%;
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+button{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: lightgreen;
+    border-radius: 5px;
+    width: 30%;
+    border:none;
+    box-shadow: 2px 2px solid black;
+    height: 20%;
+    display: block;
+    margin: auto;
+
+}
+
+.objet{
+    flex:1;
 }
 
 

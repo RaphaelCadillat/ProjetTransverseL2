@@ -12,6 +12,7 @@ free_php_session();
         <link rel="stylesheet"href="../Styles/signup.css" />
     </head>
     <body>
+    <br><br><br><br>
     <div class ="inscription">
         <p>Vous êtes sur la page d'inscription !</p>
         <form action="" method="post">

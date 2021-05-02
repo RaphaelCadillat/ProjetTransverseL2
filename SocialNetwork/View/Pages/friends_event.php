@@ -26,6 +26,8 @@ $lang_user = $_SESSION['lang_user'];
     </head>
     <body>
         <?php include('navigation_bar.php') ?>
+        <div class="body">
+        <br> 
         <nav id="eventnav">
             <ul id="enav">
                 <li><a href="create_event.php">Créer un event</a></li>

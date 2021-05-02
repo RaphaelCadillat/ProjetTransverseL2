@@ -32,7 +32,10 @@ require '../../Controller/events/insert_event.php';
         
     </head>
     <body>
+    
         <?php include('navigation_bar.php') ?>
+        <div class="body">
+        <br> 
         <nav id="eventnav">
             <ul id="enav">
                 <li><a href="create_event.php">Créer un event</a></li>
@@ -41,6 +44,7 @@ require '../../Controller/events/insert_event.php';
             </ul>
         </nav>
         <br>
+        
         <form action="" method="post">
 
             <div>
@@ -67,8 +71,10 @@ require '../../Controller/events/insert_event.php';
             <br>
             <div>
             <button type="submit" name="submit_event">Create event</button>
-            <br>
-
+    
+           
+            
+</div>
 
     </body>
 </html>

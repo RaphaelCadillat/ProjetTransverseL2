@@ -1,28 +1,27 @@
 html{
-    background-image: url("../../image/titre.jpg");
     width:auto;
     height: auto;
     background-size: cover;
+    background-color: dodgerblue;
     }
-body
-{
-    overflow : hidden;
-}
+    
 
-button{
-    font-family:Arial, Helvetica, sans-serif;
-    color: white;
-    background-color: green;
-    font-size: 20px;
-    display: block;
-    margin:auto;
-    height: 5%;
-    width: 15%;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    border-radius: 40px 40px 40px 40px;
-}
-
+    button{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background-color: lightgreen;
+        border-radius: 5px;
+        width: 30%;
+        border:none;
+        box-shadow: 2px 2px solid black;
+        height: 10%;
+        display: grid;
+        margin: auto;
+        place-items: center;
+        
+    
+    }
+    
 p
 {
     margin-top: 20px;
@@ -30,19 +29,24 @@ p
 }
 .inscription
 {
+    margin-top: 100px;
     margin: auto;
-    background-color: white;
-    width: 40%;
+    background-color: silver;
+    width: 60%;
     height: 700px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    top: 30%;
 }
 
 input{
     width: 50%;
     display: block;
     margin: auto;
-    height: 25%;
+    height: 40%;
+    border-top:2px solid dodgerblue; border-left:2px solid  dodgerblue;
+    border-bottom:2px solid  lightgreen;border-right:2px solid  lightgreen;
+    font-size: large;
 }
 form{
     margin-top: 100px;

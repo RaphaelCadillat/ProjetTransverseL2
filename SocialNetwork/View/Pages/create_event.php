@@ -67,5 +67,14 @@ require '../../Controller/events/insert_event.php';
             <br>
             <textarea id="descriptionevent" name="description_event"></textarea>
             </div>
+
+            <br>
+            <div>
+            <button type="submit" name="submit_event">Create event</button>
+    
+           
+            
+</div>
+
     </body>
 </html>

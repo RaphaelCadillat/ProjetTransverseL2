@@ -39,11 +39,11 @@ try{
             $set_token->execute();
 
             echo"<script>alert('An email has been sent to you')</script>";
-            echo "<script>window.open('forgot_password_page.php','_self')</script>";
+            echo "<script>window.open('../../View/Pages/forgot_password_page.php','_self')</script>";
         }
         else{
             echo"<script>alert('Email unknow,please try again')</script>";
-            echo "<script>window.open('forgot_password_page.php','_self')</script>";
+            echo "<script>window.open('../../View/Pages/forgot_password_page.php','_self')</script>";
         }
     }
 }

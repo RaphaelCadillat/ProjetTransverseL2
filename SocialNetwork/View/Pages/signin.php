@@ -12,9 +12,10 @@ free_php_session();
         <link rel="stylesheet"href="../Styles/signin.css" />
     </head>
     <body>
-        
+        <br><br><br><br>
         <div class="formulaire">
         <p>Vous etes sur la page d'identification !</p>
+        <br><br><br><br>
         <form action="" method="post">
        <strong > Email : </strong><br>
             <div>

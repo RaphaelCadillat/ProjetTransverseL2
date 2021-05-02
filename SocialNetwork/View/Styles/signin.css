@@ -15,7 +15,7 @@ button{
     width: 30%;
     border:none;
     box-shadow: 2px 2px solid black;
-    height: 10%;
+    height: 40px;
     display: block;
     margin: auto;
 
@@ -24,8 +24,8 @@ button{
 .formulaire{
     margin: auto;
     background-color: white;
-    width: 35%;
-    height: 600px;
+    width: 60%;
+    height: 700px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 
@@ -37,7 +37,10 @@ input{
     width: 50%;
     display: block;
     margin: auto;
-    height: 25%;
+    height: 50px;
+    border-top:2px solid dodgerblue; border-left:2px solid  dodgerblue;
+    border-bottom:2px solid  lightgreen;border-right:2px solid  lightgreen;
+    font-size:large;
 }
 form{
     margin-top: 100px;

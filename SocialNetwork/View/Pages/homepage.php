@@ -37,7 +37,7 @@ require '../../Controller/discover_friends/add_friend.php';
     <body>
         <?php include('navigation_bar.php') ?>
         <form class="friend" id="friend1" action="../../Controller/discover_friends/confirm_req/confirm_req1.php" method="post">
-            <div> 
+            <div> <img src="../../image/pp.png" alt="photo de profil" id="pp">
 
             <input id="fname" name="f_name1" value="<?php echo htmlspecialchars($fname_user1) ?>" disabled>
             </div>
@@ -74,7 +74,7 @@ require '../../Controller/discover_friends/add_friend.php';
 
         
         <form class="friend" id="friend2" action="../../Controller/discover_friends/confirm_req/confirm_req2.php" method="post">
-            <div> 
+            <div> <img src="../../image/pp.png" alt="photo de profil" id="pp">
 
             <input id="fname" name="f_name2" value="<?php echo htmlspecialchars($fname_user2) ?>" disabled>
             </div>
@@ -111,7 +111,7 @@ require '../../Controller/discover_friends/add_friend.php';
 
         
         <form class="friend" id="friend3" action="../../Controller/discover_friends/confirm_req/confirm_req3.php" method="post">
-            <div> 
+            <div> <img src="../../image/pp.png" alt="photo de profil" id="pp">
             <input id="fname" name="f_name3" value="<?php echo htmlspecialchars($fname_user3) ?>" disabled>
             </div>
             <br>

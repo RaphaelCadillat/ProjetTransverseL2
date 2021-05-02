@@ -4,19 +4,7 @@ html{
     background-size: cover;
     background-color: dodgerblue;
     }
-body
-{
-    margin-top: 10px;
-    box-shadow: 10px 10px 10px solid black;
-    width: 60%;
-    height: 100%;
-    background-color: white;
-    display: block;
-    margin: auto;
-    box-shadow: 10px 10px 10px solid black;
-       
-        
-    }
+    
 
     button{
         margin-top: 5px;
@@ -27,8 +15,10 @@ body
         border:none;
         box-shadow: 2px 2px solid black;
         height: 10%;
-        display: block;
+        display: grid;
         margin: auto;
+        place-items: center;
+        
     
     }
     
@@ -39,19 +29,24 @@ p
 }
 .inscription
 {
+    margin-top: 100px;
     margin: auto;
     background-color: white;
-    width: 40%;
+    width: 60%;
     height: 700px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    top: 30%;
 }
 
 input{
     width: 50%;
     display: block;
     margin: auto;
-    height: 25%;
+    height: 40%;
+    border-top:2px solid dodgerblue; border-left:2px solid  dodgerblue;
+    border-bottom:2px solid  lightgreen;border-right:2px solid  lightgreen;
+    font-size: large;
 }
 form{
     margin-top: 100px;

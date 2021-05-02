@@ -8,7 +8,10 @@
         
     </head>
     <body>
+    
         <?php include('navigation_bar.php') ?>
+        <div class="body">
+        <br> 
         <nav id="eventnav">
             <ul id="enav">
                 <li><a href="create_event.php">Créer un event</a></li>
@@ -17,7 +20,7 @@
             </ul>
         </nav>
         <br>
-        <div class="body">
+        
         <form action="" method="post">
 
             <div>
@@ -37,7 +40,9 @@
             <br>
             <textarea id="descriptionevent" name="description_event"></textarea>
             </div>
+            <br><br><br><br><br><br><br><br>
             <br>
+            
 </div>
     </body>
 </html>

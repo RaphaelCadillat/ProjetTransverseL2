@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : sam. 10 avr. 2021 à 20:00
+-- Généré le : lun. 26 avr. 2021 à 20:26
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -20,6 +20,25 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `social_network`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `events_table`
+--
+
+DROP TABLE IF EXISTS `events_table`;
+CREATE TABLE IF NOT EXISTS `events_table` (
+  `id_event` int(11) NOT NULL AUTO_INCREMENT,
+  `name_event` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `info_event` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `posted_event` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `date_event` date NOT NULL,
+  `hour_event` time NOT NULL,
+  `id_user` int(11) NOT NULL,
+  PRIMARY KEY (`id_event`),
+  KEY `id_user` (`id_user`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -69,6 +88,22 @@ CREATE TABLE IF NOT EXISTS `messages_table` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `rel_user_events`
+--
+
+DROP TABLE IF EXISTS `rel_user_events`;
+CREATE TABLE IF NOT EXISTS `rel_user_events` (
+  `id_rel` int(11) NOT NULL AUTO_INCREMENT,
+  `id_user` int(11) NOT NULL,
+  `id_event` int(11) NOT NULL,
+  PRIMARY KEY (`id_rel`),
+  KEY `id_user` (`id_user`),
+  KEY `id_event` (`id_event`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `rel_user_lang`
 --
 
@@ -80,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `rel_user_lang` (
   PRIMARY KEY (`id_rel_user_lang`),
   KEY `rel_user_lang_fk0` (`id_user`),
   KEY `rel_user_lang_fk1` (`id_lang`)
-) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `rel_user_lang`
@@ -96,7 +131,8 @@ INSERT INTO `rel_user_lang` (`id_rel_user_lang`, `id_user`, `id_lang`) VALUES
 (25, 45, 1),
 (26, 46, 1),
 (27, 47, 1),
-(30, 50, 8);
+(30, 50, 8),
+(31, 51, 2);
 
 -- --------------------------------------------------------
 
@@ -114,7 +150,14 @@ CREATE TABLE IF NOT EXISTS `req_friends` (
   PRIMARY KEY (`id_req`),
   KEY `req_friends_fk0` (`id_req_from`),
   KEY `req_friends_fk1` (`id_req_to`)
-) ENGINE=MyISAM AUTO_INCREMENT=94 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=96 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `req_friends`
+--
+
+INSERT INTO `req_friends` (`id_req`, `id_req_from`, `id_req_to`, `req_statuts`, `req_datetime`) VALUES
+(94, 51, 39, 0, '2021-04-18 14:22:26');
 
 -- --------------------------------------------------------
 
@@ -136,14 +179,14 @@ CREATE TABLE IF NOT EXISTS `user_table` (
   `token` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id_user`),
   UNIQUE KEY `reg_date_user` (`reg_date_user`)
-) ENGINE=MyISAM AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=52 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `user_table`
 --
 
 INSERT INTO `user_table` (`id_user`, `id_admin`, `fname_user`, `lname_user`, `password_user`, `mail_user`, `reg_date_user`, `univ_user`, `statuts_user`, `token`) VALUES
-(39, 0, 'Amaury', 'Rossignol', '$2y$10$3AXxRA1GMScQkKOVBlzeOuPDh8bpFlyLWeMuIFrvzChojm7qJCr2q', 'a@a', '2021-04-04 21:24:24', 'efrei', '...', NULL),
+(39, 0, 'Amaury', 'Rossignol', '$2y$10$3AXxRA1GMScQkKOVBlzeOuPDh8bpFlyLWeMuIFrvzChojm7qJCr2q', 'a@a', '2021-04-04 21:24:24', 'efrei', 'ZA WARUDO', NULL),
 (40, 0, 'Kylian', 'Artu', '$2y$10$DLvRr0KnfpBqNf.VmYNNd.GTedoiZRP1c1/g8zB8FVM5dRP4trH1O', 'k@a', '2021-04-04 21:24:52', 'efrei', '...', NULL),
 (41, 0, 'Julien', 'Hassoun', '$2y$10$n7kQGg9onLIs9c5bzU8VYOFpJAJ28NyYlbs5FgKxQSBkqMAcO265y', 'j@a', '2021-04-04 21:25:38', 'efrei', '...', NULL),
 (42, 0, 'Raph', 'Cadillat', '$2y$10$AfH96j9s4iKdpXw/IGPQ2.Z5pjjLP4iGJ8/N/okb3ZNTxdWwLst2a', 'r@a', '2021-04-04 21:26:16', 'efrei', '...', NULL),
@@ -152,7 +195,8 @@ INSERT INTO `user_table` (`id_user`, `id_admin`, `fname_user`, `lname_user`, `pa
 (45, 0, 'Joseph', 'Joestar', '$2y$10$f5KwczzhiT3YsqDSHRewVefcCKTvv8pLlW4WMe/E5guyOMx7FM8Se', 'jo@b', '2021-04-04 21:28:11', 'efrei', '...', NULL),
 (46, 0, 'Jotaro', 'Joestar', '$2y$10$DdYpTWHlWUgQLOSihGf80.tAbxEEnRAZhtRbkqaUpLjpaLEvwU5VK', 'jota@b', '2021-04-04 21:28:46', 'efrei', '...', NULL),
 (47, 0, 'Sherlock', 'Holmes', '$2y$10$O4qoE6hoD5MfVTZi5kTJgu4/SFIKafqQ1cPru9gXaUUH0oeLBkYom', 's@b', '2021-04-04 21:29:16', 'efrei', '...', NULL),
-(50, 0, 'Guillaume', 'Dumas', '$2y$10$K6BMnmu9/RgSbI5o2XRRk.yXdpjLG8C4V2IWARj3Jxddcw4FD.2OG', 'g@z', '2021-04-05 18:54:06', 'efrei', '...', NULL);
+(50, 0, 'Guillaume', 'Dumas', '$2y$10$K6BMnmu9/RgSbI5o2XRRk.yXdpjLG8C4V2IWARj3Jxddcw4FD.2OG', 'g@z', '2021-04-05 18:54:06', 'efrei', '...', NULL),
+(51, 0, 'Jeremy', 'Grelaud', '$2y$10$kVA4wo4z4eNv5qTVghmIwuXiZakHOdTlYI45OeHubozDxanKP1hN.', 'je@a', '2021-04-18 16:20:37', 'Efrei', '...', NULL);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

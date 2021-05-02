@@ -36,8 +36,9 @@ require '../../Controller/discover_friends/add_friend.php';
     </head>
     <body>
         <?php include('navigation_bar.php') ?>
-        <form class="friend1" action="../../Controller/discover_friends/confirm_req/confirm_req1.php" method="post">
-            <div>
+        <form class="friend" id="friend1" action="../../Controller/discover_friends/confirm_req/confirm_req1.php" method="post">
+            <div> <img src="../../image/pp.png" alt="photo de profil" id="pp">
+
             <input id="fname" name="f_name1" value="<?php echo htmlspecialchars($fname_user1) ?>" disabled>
             </div>
             <br>
@@ -72,8 +73,9 @@ require '../../Controller/discover_friends/add_friend.php';
         
 
         
-        <form class="friend2" action="../../Controller/discover_friends/confirm_req/confirm_req2.php" method="post">
-            <div>
+        <form class="friend" id="friend2" action="../../Controller/discover_friends/confirm_req/confirm_req2.php" method="post">
+            <div> <img src="../../image/pp.png" alt="photo de profil" id="pp">
+
             <input id="fname" name="f_name2" value="<?php echo htmlspecialchars($fname_user2) ?>" disabled>
             </div>
             <br>
@@ -108,8 +110,8 @@ require '../../Controller/discover_friends/add_friend.php';
 
 
         
-        <form class="friend3" action="../../Controller/discover_friends/confirm_req/confirm_req3.php" method="post">
-            <div>
+        <form class="friend" id="friend3" action="../../Controller/discover_friends/confirm_req/confirm_req3.php" method="post">
+            <div> <img src="../../image/pp.png" alt="photo de profil" id="pp">
             <input id="fname" name="f_name3" value="<?php echo htmlspecialchars($fname_user3) ?>" disabled>
             </div>
             <br>
@@ -142,14 +144,14 @@ require '../../Controller/discover_friends/add_friend.php';
             <button id="addfriend" name="addfriend3" type="submit" >Add <?php echo htmlspecialchars($fname_user3) ?> as friend</button>
         </form>
        
-
+        <div class= "refresh">
         
-        <form action="homepage.php" method="post">
+        <form   action="homepage.php" method="post">
 
-            <button id="refresh" name="refresh" type="submit" >Refresh</button>
+            <button class="objet" id="refresh" name="refresh" type="submit" >Refresh</button>
 
             <div>
-                <select id="l_user" name="lang_user" required="required">
+                <select class="objet" id="l_user" name="lang_user" required="required">
                     <option disabled>Select language</option>
                     <option value=1 <?php if ($lang_user == 1) echo "selected"; ?>>English</option>
                     <option value=2 <?php if ($lang_user == 2) echo "selected"; ?>>French</option>
@@ -162,6 +164,6 @@ require '../../Controller/discover_friends/add_friend.php';
                 </select>
             </div>
         </form>
-        
+        </div>
     </body>
 </html>

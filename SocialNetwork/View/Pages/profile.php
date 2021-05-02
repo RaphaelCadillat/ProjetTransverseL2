@@ -32,58 +32,59 @@ include("../../Model/delete_user.php");
     </head>
     <body>
         <?php include('navigation_bar.php') ?>
-        <p>This is your profile !</p>
-
-        <form action="" method="post">
+        <div class= "body">
+        <form class="profil" action="" method="post">
+            <div>
+                <img src="../../image/pp.png" alt="photo de profil" id="pp">
+            </div>
 
             <div>
             <p>First Name :</p>
-            <input id="fname" name="f_name" value="<?php echo htmlspecialchars($fname_user) ?>" disabled>
+            <input class='objet' id="fname" name="f_name" value="<?php echo htmlspecialchars($fname_user) ?>" disabled>
             </div>
-            <br>
+            
 
             <div>
             <p>Last Name :</p>
-            <input id="lname" name="l_name" value="<?php echo htmlspecialchars($lname_user) ?>" disabled>
+            <input class='objet' id="lname" name="l_name" value="<?php echo htmlspecialchars($lname_user) ?>" disabled>
             </div>
-            <br>
-
+            
             <div>
             <p>Mail :</p>
-            <input id="email" name="mail_user" value="<?php echo htmlspecialchars($mail_user) ?>" disabled>
+            <input  class='objet' id="email" name="mail_user" value="<?php echo htmlspecialchars($mail_user) ?>" disabled>
             </div>
-            <br>
+           
             
             <div>
             <p>Language :</p>
-            <input id="userlang" name="user_lang" value="<?php echo htmlspecialchars($lang_user) ?>" disabled>
+            <input class='objet' id="userlang" name="user_lang" value="<?php echo htmlspecialchars($lang_user) ?>" disabled>
             </div>
-            <br>
+           
 
             <div>
             <p>University :</p>
-            <input id="univuser" name="univ_user" value="<?php echo htmlspecialchars($univ_user) ?>" disabled>
+            <input class='objet' id="univuser" name="univ_user" value="<?php echo htmlspecialchars($univ_user) ?>" disabled>
             </div>
-            <br>
+            
 
             <div>
             <p>Description :</p>
-            <br>
-            <textarea id="statutsuser" name="statuts_user" disabled><?php echo htmlspecialchars($statuts_user) ?></textarea>
+            
+            <textarea class='objet' id="statutsuser" name="statuts_user"  disabled><?php echo htmlspecialchars($statuts_user) ?></textarea>
             </div>
-            <br>
+            
 
             <div>
-            <button id="changep" name="change_p" type="submit" formaction="change_user.php">Change your profile </button>
+            <button  class="b_profile" id="changep" name="change_p" type="submit" formaction="change_user.php">Change your profile </button>
             </div>
-            <br>
-
+            
             <div>
-            <button id="suppr_user" name="suppr_user" type="submit">Delete your profile </button>
+            <button class="b_profile" id="suppr_user" name="suppr_user" type="submit">Delete your profile </button>
             </div>
-            <br>
+           
 
         </form>
-
+        
+        </div>
     </body>
 </html>

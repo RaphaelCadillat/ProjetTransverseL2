@@ -57,6 +57,8 @@ if ($is_logged == false)
             echo 'ERREUR : '.$pe->getMessage();
         }
         ?>
+        <div class="body">
+        <br>
         <nav id="friendnav">
             <ul id="fnav">
                 <li><a href="friends.php">Amis</a></li>
@@ -68,6 +70,8 @@ if ($is_logged == false)
         <!-- html liste d'attente -->
         <p>Demande envoyé</p>
         <br>
+        <div class="envoi">
+        <div class="demande">
         <?php
         //demande envoyé
         for($i=0;$i<sizeof($data_relfriends);$i++){
@@ -87,10 +91,14 @@ if ($is_logged == false)
             
         }
         ?>
+        </div>
+        </div>
         <p>Demande reçue</p>
         <br>
+        <div class="reception">
         <?php
         //demande reçue
+        
         for($i=0;$i<sizeof($data_relfriends);$i++){
             if($data_relfriends[$i]['id_req_to'] == $id_user && $data_relfriends[$i]['req_statuts'] == 1){
 
@@ -106,6 +114,11 @@ if ($is_logged == false)
                 echo "<a class='decline' href='../../Controller/supp_friend.php?id_req=".$id_req."'>Decline</a>";
             }     
         }
+        
         ?>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+        
     </body>
 </html>

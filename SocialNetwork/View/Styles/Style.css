@@ -1,0 +1,222 @@
+
+#statutsuser
+{
+    resize: none;
+    width: 300px;
+    height: 200px;
+}
+
+#friend1
+{
+    float:right;
+    left: 10%;
+}
+
+#friend2
+{
+    float: right;
+    left: 30%;
+}
+
+#friend3
+{
+    float: right;
+    left: 60%;
+}
+
+
+.friend{
+    margin-top: 30px;
+    background-color: white;
+    width: 20%;
+    height: 50%;
+    text-align: center;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    display: block;
+
+}
+
+#refresh
+{
+    width: 20%;
+    height: 40px;
+    left : 40%;
+    top : 80%;
+    float: inline-start;
+
+
+}
+
+#addfriend
+{
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#l_user
+{
+    width: 20%;
+    height: 50%;
+    left : 40%;
+    top : 80%;
+    height: 30px;
+}
+
+#menufond{
+    width: 100%;
+    background: linear-gradient(#7cb7ff, #1b81ff);
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2),
+                0px 1px 0px 1px rgba(255, 255, 255, 0.5) inset,
+                0px -3px 0px 1px rgba(0, 0, 0, 0.1) inset;
+    overflow : hidden;
+    height : 50px;
+}
+
+#menu{
+	font-family: "Trebuchet MS";
+    display: table;
+	margin-right : 0;
+	margin-left : auto;
+	margin-top : 0;
+	padding : 0;
+}
+
+#menu li{
+    display: table-cell;
+	width: 90px;
+	transition:1s;
+}
+
+#menu li:hover{
+	width:90px;
+	transition:1s;
+}
+
+#menu a{
+	display: block;
+	line-height: 46px;
+    text-align: center;
+	text-decoration : none;
+	color : white;
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+	transition : text-shadow,color 1s;
+	position:relative;  /* utilse pour l'affichage du point */	
+}
+
+#menu a:hover{
+	background: rgba(255,255,255,0.1);
+	border-bottom: solid 4px rgba(255,255,255,0.8);
+}
+
+#menu button:hover{
+	background: rgba(255,255,255,0.1);
+	border-bottom: solid 4px rgba(255,255,255,0.8);
+}
+
+
+
+input{
+    width: 50%;
+    border:none;
+    border-bottom: 2px solid green;
+    margin-bottom:10px;
+    height: 30px;
+
+}
+
+html{
+    background-color: lightblue;
+    overflow-y: none;
+    font-family: Verdana;
+    overflow: hidden;
+}
+textarea{
+
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    resize: none;
+    width: 70%;
+
+
+}
+#pp{
+    width: 100px;
+    display: block;
+    margin: auto;
+    
+
+}
+
+
+.profil{
+
+    margin: auto;
+    text-align: center;
+   
+    margin-top: 10px;
+}
+
+.b_profile{
+    display: block;
+    margin: auto;
+}
+
+.body{
+    margin-top: 10px;
+    box-shadow: 10px 10px 10px solid black;
+    width: 60%;
+    height: 100%;
+    background-color: white;
+    display: block;
+    margin: auto;
+    box-shadow: 10px 10px 10px solid black;
+    text-align: center;
+}
+
+#changep{
+    float: left;
+    margin-left: 15%;
+    
+}
+
+.inscription{
+    
+   display: block;
+    margin: auto;
+   
+    text-align: center;
+    margin-top: 10px;
+    box-shadow: 10px 10px 10px solid black;
+    height: 100%;
+}
+
+#logo{
+    height: 50%;
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+button{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: lightgreen;
+    border-radius: 5px;
+    width: 30%;
+    border:none;
+    box-shadow: 2px 2px solid black;
+    height: 20%;
+    display: block;
+    margin: auto;
+
+}
+
+.objet{
+    flex:1;
+}
+
+

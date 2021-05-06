@@ -1,4 +1,9 @@
 
+ /* html, body{
+    margin :0;
+    padding: 0;
+    height: 100%;} */
+
 #statutsuser
 {
     resize: none;
@@ -124,6 +129,9 @@ input{
     border-bottom: 2px solid green;
     margin-bottom:10px;
     height: 30px;
+    font-size: large;
+    display: block;
+    margin: auto;
 
 }
 
@@ -209,14 +217,53 @@ button{
     width: 30%;
     border:none;
     box-shadow: 2px 2px solid black;
-    height: 20%;
+    height: 50%;
     display: block;
     margin: auto;
 
 }
 
 .objet{
-    flex:1;
+   flex: 1;
 }
 
+.oubli_mdp{
+
+    display: flex;
+    margin: 0 auto ;
+    flex-flow: column;
+    flex-direction: column;
+    background-color: whitesmoke;
+    width: 70%;
+    height: 60%;
+    flex: 1;
+    border-radius: 5px 5px 5px 5px;
+    
+}
+
+#oubli_mail{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: lightgreen;
+    border-radius: 5px;
+    width: 80%;
+    border:none;
+    box-shadow: 2px 2px solid black;
+    height: auto;
+    display: block;
+    margin: auto;    
+
+}
+#mdp_forms{
+    
+    display: block;
+    width: 100%;
+    flex-flow: column;
+    margin: auto auto;
+    height: 100%;
+    text-align: center;
+    margin-top: 10px;
+    
+    
+}
 

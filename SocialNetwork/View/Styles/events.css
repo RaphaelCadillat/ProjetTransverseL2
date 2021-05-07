@@ -22,19 +22,19 @@
 	font-family: "Trebuchet MS";
     display: table;
 	margin-right : 0;
-	margin-left : 15px;
+	margin-left : 0px;
 	margin-top : 0;
 	padding : 0;
 }
 
 #enav li{
     display: table-cell;
-	width: 250px;
+	width: 300px;
 	transition:1s;
 }
 
 #enav li:hover{
-	width: 250px;
+	width: 300px;
 	transition:1s;
 }
 

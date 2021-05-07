@@ -50,7 +50,7 @@ if ($is_logged == false)
                 "username_1" => $id_user,
                 "username_2" => $id_user
             ]);
-
+    
             $data_relfriends = $relfriends->fetchAll();
         }
         catch(PDOException $pe){
@@ -92,7 +92,7 @@ if ($is_logged == false)
                 $username_friend = $print_username_friend->fetch();
                 $id_req = $data_relfriends[$i]['id_req'];
                 echo '<p class="friends">'.$username_friend["fname_user"]." ".$username_friend["lname_user"].'</p>';
-                echo '<input type="button" class="message_friend" value=" message ">';
+                echo '<input type="button" class="message_friend" value=" Message ">';
                 echo "<a class='delete' href='../../Controller/supp_friend.php?id_req=".$id_req."'>Delete</a>";
             }
         }

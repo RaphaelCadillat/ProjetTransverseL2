@@ -79,7 +79,8 @@ if ($is_logged == false)
 
                 $id_req = $data_relfriends[$i]['id_req'];
                 echo '<p class="friends">'.$username_friend["fname_user"]." ".$username_friend["lname_user"].'</p>';
-                echo '<input type="button" class="message_friend" value=" message ">';
+                echo '<input type="button" class="message_friend" value=" Message ">';
+                echo "<a class='delete' href='profile_of_a_friend.php?id_user_to_show=".$data_relfriends[$i]['id_req_to']."'>Friend's profile</a>";
                 echo "<a class='delete' href='../../Controller/supp_friend.php?id_req=".$id_req."'>Delete</a>";
             }
 
@@ -93,6 +94,7 @@ if ($is_logged == false)
                 $id_req = $data_relfriends[$i]['id_req'];
                 echo '<p class="friends">'.$username_friend["fname_user"]." ".$username_friend["lname_user"].'</p>';
                 echo '<input type="button" class="message_friend" value=" Message ">';
+                echo "<a class='delete' href='profile_of_a_friend.php?id_user_to_show=".$data_relfriends[$i]['id_req_from']."'>Friend's profile</a>";
                 echo "<a class='delete' href='../../Controller/supp_friend.php?id_req=".$id_req."'>Delete</a>";
             }
         }

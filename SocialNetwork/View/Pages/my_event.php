@@ -1,7 +1,5 @@
 <?php
 require '../../Model/session_util.php';
-require '../../Model/connection.php';
-require '../../Model/event_management.php';
 ini_php_session();
 $id_user = $_SESSION['id_user'];
 $id_admin = $_SESSION['id_admin'];
@@ -21,7 +19,9 @@ if ($is_logged == false)
     echo "<script>window.open('../../index.php','_self')</script>";
 }
 
-require '../../Controller/events/insert_event.php';
+$id_event = $_GET['id_event'];
+
+require '../../Model/connection.php';
 
 try{
     $option = [
@@ -33,23 +33,18 @@ try{
     //Preparation des requetes PDO
     $PDO = new PDO($DB_DSN,$DB_USER,$DB_PASS);
 
-    $req_event = $PDO->prepare('SELECT * FROM events_table WHERE id_user = ?');
-    $req_event->bindValue(1, $id_user);
+    $req_event = $PDO->prepare('SELECT * FROM events_table WHERE id_event=?');
+    $req_event->bindValue(1, $id_event);
     $req_event->execute();
-    
-    $check_event = $req_event->rowCount();
 
-    if($check_event == 1)
-    {
-        $event = $req_event->fetch();
-        $id_event = $event['id_event'];
-        header("Location: my_event.php?id_event=$id_event");
-    }
+    $event = $req_event->fetch();
+
+
 }
 catch(PDOException $pe){
     echo 'ERREUR : '.$pe->getMessage();
 }
-
+require '../../Controller/events/del_event.php';
 ?>
 
 <!DOCTYPE html>
@@ -77,33 +72,39 @@ catch(PDOException $pe){
         
         <form action="" method="post">
 
-            
+            <div>
+            <p>You have already an event active !</p>
+            <br>
+            </div>
+
             <div>
             <p>Event Name :</p>
-            <input id="eventname" name="event_name">
+            <input id="eventname" name="event_name" value="<?php echo htmlspecialchars($event['name_event']) ?>" disabled>
             </div>
             <br>
 
             <div>
             <p>Date de l'event :</p>
-            <input type="date" id="eventdate" name="event_date">
+            <input type="date" id="eventdate" name="event_date" value="<?php echo $event['date_event'] ?>" disabled>
             <br>
             <p>Heure de l'event :</p>
-            <input type="time" id="eventdate" name="event_hour">
+            <input type="time" id="eventdate" name="event_hour" value="<?php echo $event['hour_event'] ?>" disabled>
             </div>
             <br>
 
             <div>
             <p>Description :</p>
             <br>
-            <textarea id="descriptionevent" name="description_event"></textarea>
+            <textarea id="descriptionevent" name="description_event" disabled><?php echo htmlspecialchars($event['info_event']) ?></textarea>
             </div>
 
             <br>
             <div>
-            <button type="submit" name="submit_event">Create event</button>
+            <button type="submit" name="del_event">Delete event</button>
     
-                
+           
+            
         </div>
+
     </body>
 </html>

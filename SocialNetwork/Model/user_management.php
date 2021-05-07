@@ -1,4 +1,4 @@
-<?php // PAS ENCORE TESTE
+<?php //
 
 // change fname
 // change lname

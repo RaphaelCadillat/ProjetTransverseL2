@@ -14,7 +14,8 @@ free_php_session();
     <body>
     <br><br><br><br>
     <div class ="inscription">
-        <p>Vous êtes sur la page d'inscription !</p>
+    <br>
+        <p>Veuillez vous inscrire si vous n'avez pas encore de compte !</p>
         <form action="" method="post">
         <strong > First Name : </strong><br>
             <div>

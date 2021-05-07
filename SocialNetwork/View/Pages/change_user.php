@@ -74,6 +74,7 @@ $lang_user = $_SESSION['lang_user'];
             <?php include("../../Controller/modif_user.php"); ?>
 
         </form>
+        <br><br>
         </div>
     </body>
 </html>

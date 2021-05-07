@@ -59,7 +59,7 @@ if ($is_logged == false)
         ?>
         <div class="body">
         <br>
-        <nav id="friendnav">
+        <nav id="waiting_friendnav">
             <ul id="fnav">
                 <li><a href="friends.php">Amis</a></li>
                 <li><a href="waiting_request.php">Demande en attente</a></li>
@@ -68,7 +68,7 @@ if ($is_logged == false)
         </nav>
         <br>
         <!-- html liste d'attente -->
-        <p>Demande envoyé</p>
+        <p>Demande envoyée</p>
         <br>
         <div class="envoi">
         <div class="demande">
@@ -85,7 +85,7 @@ if ($is_logged == false)
                 
                 $id_req = $data_relfriends[$i]['id_req'];
 
-                echo '<p class="friends">'.$username_wait_friend['fname_user']." ".$username_wait_friend['lname_user'].'</p>';
+                echo '<p class="waiting_friends">'.$username_wait_friend['fname_user']." ".$username_wait_friend['lname_user'].'</p>';
                 echo "<a class='cancel' href='../../Controller/supp_friend.php?id_req=".$id_req."'>Cancel</a>";
             }
             

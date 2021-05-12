@@ -84,7 +84,7 @@ include("../../Model/delete_user.php");
            
 
         </form>
-        
+        <br> <br>
         </div>
     </body>
 </html>

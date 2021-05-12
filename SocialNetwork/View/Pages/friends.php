@@ -50,7 +50,7 @@ if ($is_logged == false)
                 "username_1" => $id_user,
                 "username_2" => $id_user
             ]);
-
+    
             $data_relfriends = $relfriends->fetchAll();
         }
         catch(PDOException $pe){
@@ -61,7 +61,7 @@ if ($is_logged == false)
             <ul id="fnav">
                 <li><a href="friends.php">Amis</a></li>
                 <li><a href="waiting_request.php">Demande en attente</a></li>
-                <li><a href="friends.php">Rechercher un ami</a></li>
+                <li><a href="search_friend.php">Rechercher un ami</a></li>
             </ul>
         </nav>
         <br>
@@ -79,7 +79,8 @@ if ($is_logged == false)
 
                 $id_req = $data_relfriends[$i]['id_req'];
                 echo '<p class="friends">'.$username_friend["fname_user"]." ".$username_friend["lname_user"].'</p>';
-                echo '<input type="button" class="message_friend" value=" message ">';
+                echo '<input type="button" class="message_friend" value=" Message ">';
+                echo "<a class='delete' href='profile_of_a_friend.php?id_user_to_show=".$data_relfriends[$i]['id_req_to']."'>Friend's profile</a>";
                 echo "<a class='delete' href='../../Controller/supp_friend.php?id_req=".$id_req."'>Delete</a>";
             }
 
@@ -92,7 +93,8 @@ if ($is_logged == false)
                 $username_friend = $print_username_friend->fetch();
                 $id_req = $data_relfriends[$i]['id_req'];
                 echo '<p class="friends">'.$username_friend["fname_user"]." ".$username_friend["lname_user"].'</p>';
-                echo '<input type="button" class="message_friend" value=" message ">';
+                echo '<input type="button" class="message_friend" value=" Message ">';
+                echo "<a class='delete' href='profile_of_a_friend.php?id_user_to_show=".$data_relfriends[$i]['id_req_from']."'>Friend's profile</a>";
                 echo "<a class='delete' href='../../Controller/supp_friend.php?id_req=".$id_req."'>Delete</a>";
             }
         }

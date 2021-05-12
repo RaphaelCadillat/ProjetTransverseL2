@@ -102,10 +102,12 @@ $lang_user = $_SESSION['lang_user'];
                     $host->execute();
 
                     $data_host = $host->fetchAll();
+                    $id_host = $data_host[0]['id_user'];
 
                     echo '<div>
                     <p>Host :</p>
                     <input type="text" id="hostevent" name="host_event" value=" '. $data_host[0]["fname_user"] . ' ' .$data_host[0]["lname_user"] . ' " disabled>
+                    <a href="profile_of_a_friend.php?id_user_to_show='.$id_host.'">Profile of the host</a>
                     </div>
                     <br>';
                     echo '<br>';

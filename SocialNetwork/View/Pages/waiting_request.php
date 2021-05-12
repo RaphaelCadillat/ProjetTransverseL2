@@ -59,16 +59,16 @@ if ($is_logged == false)
         ?>
         <div class="body">
         <br>
-        <nav id="friendnav">
+        <nav id="waiting_friendnav">
             <ul id="fnav">
                 <li><a href="friends.php">Amis</a></li>
                 <li><a href="waiting_request.php">Demande en attente</a></li>
-                <li><a href="friends.php">Rechercher un ami</a></li>
+                <li><a href="search_friend.php">Rechercher un ami</a></li>
             </ul>
         </nav>
         <br>
         <!-- html liste d'attente -->
-        <p>Demande envoyé</p>
+        <p>Demande envoyée</p>
         <br>
         <div class="envoi">
         <div class="demande">
@@ -85,7 +85,8 @@ if ($is_logged == false)
                 
                 $id_req = $data_relfriends[$i]['id_req'];
 
-                echo '<p class="friends">'.$username_wait_friend['fname_user']." ".$username_wait_friend['lname_user'].'</p>';
+                echo '<p class="waiting_friends">'.$username_wait_friend['fname_user']." ".$username_wait_friend['lname_user'].'</p>';
+                echo "<a class='cancel' href='profile_of_a_friend.php?id_user_to_show=".$data_relfriends[$i]['id_req_to']."'>Profile</a>";
                 echo "<a class='cancel' href='../../Controller/supp_friend.php?id_req=".$id_req."'>Cancel</a>";
             }
             
@@ -111,6 +112,7 @@ if ($is_logged == false)
                 echo '<p class="friends">'.$username_receive_friend['fname_user']." ".$username_receive_friend['lname_user'].'</p>';
                 $id_req = $data_relfriends[$i]['id_req'];
                 echo "<a class='accept' href='../../Controller/accept_freq.php?id_req=".$id_req."'>Accept</a>";
+                echo "<a class='accept' href='profile_of_a_friend.php?id_user_to_show=".$data_relfriends[$i]['id_req_from']."'>Profile</a>";
                 echo "<a class='decline' href='../../Controller/supp_friend.php?id_req=".$id_req."'>Decline</a>";
             }     
         }

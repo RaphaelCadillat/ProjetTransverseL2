@@ -103,7 +103,7 @@ require '../../Controller/events/del_event.php';
             <button type="submit" name="del_event">Delete event</button>
     
            
-            
+            <br><br>
         </div>
 
     </body>

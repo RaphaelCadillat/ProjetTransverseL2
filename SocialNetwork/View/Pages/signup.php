@@ -12,38 +12,37 @@ free_php_session();
         <link rel="stylesheet"href="../Styles/signup.css" />
     </head>
     <body>
-    <br><br><br><br>
     <div class ="inscription">
     <br>
         <p>Veuillez vous inscrire si vous n'avez pas encore de compte !</p>
-        <form action="" method="post">
-        <strong > First Name : </strong><br>
+        <form class="objet" action="" method="post">
+        <strong > First Name : </strong>
             <div>
-            <input type="text" name="fname_user" placeholder="First Name" required="required">
-            </div><br>
-            <strong > Last Name : </strong><br>
+            <input class="objet" type="text" name="fname_user" placeholder="First Name" required="required">
+            </div>
+            <strong > Last Name : </strong>
             <div>
-            <input type="text" name="lname_user" placeholder="Last Name" required="required">
-            </div><br>
-            <strong > Password : </strong><br>
+            <input class="objet" type="text" name="lname_user" placeholder="Last Name" required="required">
+            </div>
+            <strong > Password : </strong>
             <div>
-            <input id="password" type="password" name="pass_user" placeholder="Password" required="required">
-            </div><br>
-            <strong > Verify Password : </strong><br>
+            <input class="objet" id="password" type="password" name="pass_user" placeholder="Password" required="required">
+            </div>
+            <strong > Verify Password : </strong>
             <div>
-            <input id="verif_pass_user" type="password" name="verif_pass_user" placeholder="Verify Password" required="required">
-            </div><br>
-            <strong > Email : </strong><br>
+            <input class="objet" id="verif_pass_user" type="password" name="verif_pass_user" placeholder="Verify Password" required="required">
+            </div>
+            <strong > Email : </strong>
             <div>
-            <input id="email" type="email" name="mail_user" placeholder="Email" required="required">
-            </div><br>
-            <strong > University : </strong><br>
+            <input class="objet" id="email" type="email" name="mail_user" placeholder="Email" required="required">
+            </div>
+            <strong > University : </strong>
             <div>
-            <input type="text" name="univ_user" placeholder="University" required="required">
-            </div><br>
-            <strong > Language : </strong><br>
+            <input class="objet" type="text" name="univ_user" placeholder="University" required="required">
+            </div>
+            <strong > Language : </strong>
             <div>
-            <select name="lang_user" required="required">
+            <select class="objet" name="lang_user" required="required">
                 <option disabled>Select your first language</option>
                 <option value=1>English</option>
                 <option value=2>French</option>
@@ -54,12 +53,13 @@ free_php_session();
                 <option value=7>Chinese</option>
                 <option value=8>Japanese</option>
             </select>
-            </div><br>
+            </div>
 
-            <a href="signin.php">Déjà inscrit ?</a><br><br>
+            <a class="objet" href="signin.php">Déjà inscrit ?</a>
 
-            <button id="signup" name="sign_up">Sign Up</button>
+            <button class="objet" id="signup" name="sign_up">Sign Up</button>
             <?php include("../../Controller/insert_user.php"); ?>
+            <br>
         </form>
     </div>
     </body>

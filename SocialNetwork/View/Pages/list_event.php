@@ -101,6 +101,6 @@ $lang_user = $_SESSION['lang_user'];
         }
 
         ?>
-
+    </div>
     </body>
 </html>

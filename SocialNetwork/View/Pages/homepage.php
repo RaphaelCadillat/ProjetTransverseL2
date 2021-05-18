@@ -146,7 +146,7 @@ require '../../Controller/discover_friends/add_friend.php';
         </form>
         </div>
         
-        
+        <br><br>
        <div class="container2">
         <div  class="objet" id= "refresh">
         

@@ -81,10 +81,10 @@ include("../../Model/delete_user.php");
             <div class='objet'>
             <button class="b_profile" id="suppr_user" name="suppr_user" type="submit">Delete your profile </button>
             </div>
-           <br>
+           <br><br>
 
         </form>
-       
+       <br>
         </div>
     </body>
 </html>

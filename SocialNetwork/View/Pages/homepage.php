@@ -36,8 +36,6 @@ require '../../Controller/discover_friends/add_friend.php';
     </head>
     <body>
         <?php include('navigation_bar.php') ?>
-        <div class="pagehorizontal">
-        <div class="container1">
         <form class="friend" id="friend1" action="../../Controller/discover_friends/confirm_req/confirm_req1.php" method="post">
             <div> <img src="../../image/pp.png" alt="photo de profil" id="pp">
 
@@ -147,14 +145,14 @@ require '../../Controller/discover_friends/add_friend.php';
         </div>
         
         <br><br>
-       <div class="container2">
+       
         <div  class="objet" id= "refresh">
         
         <form  class="objet"  action="homepage.php" method="post">
 
             <button class="objet" id="refresh" name="refresh" type="submit" >Refresh</button>
 
-            <div  class="objet">
+           
                 <select class="objet" id="l_user" name="lang_user" required="required">
                     <option disabled>Select language</option>
                     <option value=1 <?php if ($lang_user == 1) echo "selected"; ?>>English</option>
@@ -166,10 +164,10 @@ require '../../Controller/discover_friends/add_friend.php';
                     <option value=7 <?php if ($lang_user == 7) echo "selected"; ?>>Chinese</option>
                     <option value=8 <?php if ($lang_user == 8) echo "selected"; ?>>Japanese</option>
                 </select>
-            </div>
+            
         </form>
-        </div>
-        </div>
-        </div>
+      
+        
+    
     </body>
 </html>

@@ -22,9 +22,11 @@ $lang_user = $_SESSION['lang_user'];
         <title>Social Network</title>     
     </head>
     <body>
+    
         <?php include('navigation_bar.php') ?>
+        <div class= "body">
         <p>Please complete all fields!</p>
-        <form action="" method="post">
+        <form class="profil" action="" method="post">
 
             <div>
             <p>First Name :</p>
@@ -72,5 +74,6 @@ $lang_user = $_SESSION['lang_user'];
             <?php include("../../Controller/modif_user.php"); ?>
 
         </form>
+        </div>
     </body>
 </html>

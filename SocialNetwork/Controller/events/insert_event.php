@@ -35,16 +35,16 @@ try{
         $event_description = htmlentities($_POST['description_event']);
 
         //Sécurisation des données
-        if(strlen($event_name) > 20)
+        if(strlen($event_name) > 50)
         {
-            echo"<script>alert('Event name must to be less than 20 characters')</script>";
+            echo"<script>alert('Event name must be less than 50 characters')</script>";
             echo "<script>window.open('create_event.php','_self')</script>";
             exit();
         }
 
         if(strlen($event_description) > 200)
         {
-            echo"<script>alert('Event description must to be less than 200 characters')</script>";
+            echo"<script>alert('Event description must be less than 200 characters')</script>";
             echo "<script>window.open('create_event.php','_self')</script>";
             exit();
         }

@@ -92,10 +92,11 @@ if ($is_logged == false)
             
         }
         ?>
-        </div>
-        </div>
+       </div>
+    </div>
         <p>Demande reçue</p>
         <br>
+    
         <div class="reception">
         <?php
         //demande reçue

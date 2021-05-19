@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8" />
+        <link rel="stylesheet" href="../../../View/Styles/Style.css" />
+        <title>Social Network</title>
+        
+    </head>
+    <body>
+        <div class="reussi">
 <?php
 require '../../../Model/session_util.php';
 ini_php_session();
@@ -20,29 +30,18 @@ if ($is_logged == false)
 }
 
 require '../../../Model/req_user.php';
-$a = add_req_friend($id_user, $_SESSION['id_user2']);
+$a = add_req_friend($id_user, $_SESSION['id_user3']);
 if($a==false)
 {
-    echo 'raté';
+    echo '<p style="flex: 1">Erreur</p>';
 }
 else{
-    echo 'reussi';
+    echo '<p style="flex: 1">Réussite</p>';
 }
 ?>
-
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset = "utf-8" />
-        <title>Social Network</title>
-        
-    </head>
-
-    <body>
-        
         <form action="../../../View/Pages/homepage.php" method="post">
-            <button type="submit">nice</button>
+            <button id="confirm" type="submit">nice</button>
         </form>
+</div>
     </body>
 </html>

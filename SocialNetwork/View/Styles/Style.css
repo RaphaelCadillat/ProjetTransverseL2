@@ -5,6 +5,11 @@
     height: 100%;
 } 
 
+html{
+    background-color: lightblue;
+    font-family: Verdana;  
+}
+
 #statutsuser
 {
     resize: none;
@@ -110,10 +115,7 @@ input{
     margin-bottom: 3%;
 }
 
-html{
-    background-color: lightblue;
-    font-family: Verdana;  
-}
+
 textarea{
     display: block;
     margin: auto;
@@ -219,12 +221,11 @@ button{
     display: flex;
     width: 100%;
     flex-flow: column;
-    margin: auto auto;
+    margin: auto;
     height : 40%;
-    text-align: center;
-    margin-top: 30%;
     top: 30%;
     position: relative;
+    text-align: center;
     
 }
 
@@ -258,11 +259,9 @@ button{
 }
 
 .container{
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
     width: 70%;
     height: 30%;
+    margin-left: 15%;
     
 }
 
@@ -270,4 +269,27 @@ button{
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
+}
+
+.reussi{
+    background-color: white;
+    width: 40%;
+    height: 30%;
+    display: block;
+    margin: auto;
+    
+    text-align: center;
+    font-size: x-large;
+    top: 35%;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+}
+
+#confirm{
+    flex: 1;
+    width: 60%;
+    height: 40px;
+    margin-bottom: 15%;
+    font-size: large;
 }

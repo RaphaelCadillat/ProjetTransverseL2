@@ -34,7 +34,9 @@ if ($is_logged == false)
     </head>
 
     <body>
+        
         <?php include('navigation_bar.php');
+        
         try{
             $option = [
                 PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
@@ -57,7 +59,9 @@ if ($is_logged == false)
             echo 'ERREUR : '.$pe->getMessage();
         }
         ?>
-        <nav id="friendnav">
+        <div class="bodyami">
+        <br>
+        <nav id="waiting_friendnav">
             <ul id="fnav">
                 <li><a href="friends.php">Amis</a></li>
                 <li><a href="waiting_request.php">Demande en attente</a></li>
@@ -65,7 +69,7 @@ if ($is_logged == false)
             </ul>
         </nav>
         <br>
-
+        <div class="affichage_ami">
         <!-- html liste d'amis -->
         <?php
         for($i=0;$i<sizeof($data_relfriends);$i++){
@@ -99,5 +103,7 @@ if ($is_logged == false)
             }
         }
         ?>
+        </div>
+        </div>
     </body>
 </html>

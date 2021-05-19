@@ -60,6 +60,17 @@ form{
     flex-flow: column;
 }
 
+a{
+    margin-top: 3%;
+}
+
+#signup
+{
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 .objet{
     flex: 1;
 }

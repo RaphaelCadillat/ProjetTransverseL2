@@ -17,7 +17,7 @@ h1{
     font-family: Georgia, 'Times New Roman', Times, serif;
     color:lightblue;
     margin-bottom: 150px;
-
+    text-shadow: 2px 2px 2px black;
 }
 
 
@@ -39,4 +39,5 @@ img{
     margin-top: 10%;
     display: block;
     margin: auto;
+    border-radius: 25px;
 }

@@ -61,14 +61,14 @@ if ($is_logged == false)
         <br>
         <nav id="waiting_friendnav">
             <ul id="fnav">
-                <li><a href="friends.php">Amis</a></li>
-                <li><a href="waiting_request.php">Demande en attente</a></li>
-                <li><a href="search_friend.php">Rechercher un ami</a></li>
+                <li><a href="friends.php">Friends</a></li>
+                <li><a href="waiting_request.php">Pending requests</a></li>
+                <li><a href="search_friend.php">Search someone</a></li>
             </ul>
         </nav>
         <br>
         <!-- html liste d'attente -->
-        <p>Demande envoyée</p>
+        <p>Sending requests</p>
         <br>
         <div class="envoi">
         <div class="demande">
@@ -94,7 +94,7 @@ if ($is_logged == false)
         ?>
        </div>
     </div>
-        <p>Demande reçue</p>
+        <p>Receive requests</p>
         <br>
     
         <div class="reception">

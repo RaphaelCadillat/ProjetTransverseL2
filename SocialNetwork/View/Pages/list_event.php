@@ -30,9 +30,9 @@ $lang_user = $_SESSION['lang_user'];
         <br> 
         <nav id="eventnav">
             <ul id="enav">
-                <li><a href="create_event.php">Créer un event</a></li>
-                <li><a href="list_event.php">Tous les events</a></li>
-                <li><a href="friends_event.php">Event des amis</a></li>
+                <li><a href="create_event.php">Create an event</a></li>
+                <li><a href="list_event.php">All events</a></li>
+                <li><a href="friends_event.php">Friends's events</a></li>
             </ul>
         </nav>
         <br>

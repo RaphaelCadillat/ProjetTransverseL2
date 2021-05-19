@@ -33,14 +33,14 @@ require '../../../Model/req_user.php';
 $a = add_req_friend($id_user, $_SESSION['id_user3']);
 if($a==false)
 {
-    echo '<p style="flex: 1">Erreur</p>';
+    echo '<p style="flex: 1">A request is already sent or you are already friends !</p>';
 }
 else{
-    echo '<p style="flex: 1">Réussite</p>';
+    echo '<p style="flex: 1">Request sent !</p>';
 }
 ?>
         <form action="../../../View/Pages/homepage.php" method="post">
-            <button id="confirm" type="submit">nice</button>
+            <button id="confirm" type="submit">Nice</button>
         </form>
 </div>
     </body>

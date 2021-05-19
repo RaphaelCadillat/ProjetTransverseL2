@@ -68,9 +68,9 @@ catch(PDOException $pe){
         <br> 
         <nav id="eventnav">
             <ul id="enav">
-                <li><a href="create_event.php">Créer un event</a></li>
-                <li><a href="list_event.php">Tous les events</a></li>
-                <li><a href="friends_event.php">Event des amis</a></li>
+                <li><a href="create_event.php">Create an event</a></li>
+                <li><a href="list_event.php">All events</a></li>
+                <li><a href="friends_event.php">Friends's events</a></li>
             </ul>
         </nav>
         <br>
@@ -85,10 +85,10 @@ catch(PDOException $pe){
             <br>
 
             <div>
-            <p>Date de l'event :</p>
+            <p>Date of the event :</p>
             <input type="date" id="eventdate" name="event_date">
             <br>
-            <p>Heure de l'event :</p>
+            <p>Hour of the event :</p>
             <input type="time" id="eventdate" name="event_hour">
             </div>
             <br>

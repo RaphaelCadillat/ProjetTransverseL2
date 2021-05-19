@@ -14,7 +14,7 @@ free_php_session();
     </head>
     <body>
 
-        <h1>Bienvenue !</h1>
+        <h1>Welcome !</h1>
         
 
 

@@ -63,9 +63,9 @@ if ($is_logged == false)
         <br>
         <nav id="waiting_friendnav">
             <ul id="fnav">
-                <li><a href="friends.php">Amis</a></li>
-                <li><a href="waiting_request.php">Demande en attente</a></li>
-                <li><a href="search_friend.php">Rechercher un ami</a></li>
+                <li><a href="friends.php">Friends</a></li>
+                <li><a href="waiting_request.php">Pending requests</a></li>
+                <li><a href="search_friend.php">Search someone</a></li>
             </ul>
         </nav>
         <br>

@@ -13,7 +13,7 @@ free_php_session();
     </head>
     <body>
         <div class="formulaire">
-        <p>Vous etes sur la page d'identification !</p>
+        <p>You are on the identification page !</p>
         <form class="objet" action="" method="post">
        <strong > Email : </strong><br>
             <div>
@@ -27,7 +27,7 @@ free_php_session();
             </div><br>
 
             <a  href="forgot_password_page.php">Forgot password ?</a><br>
-            <a href="signup.php">Pas encore inscrit ?</a><br><br>
+            <a href="signup.php">Don't have an account ?</a><br><br>
 
             <button class="objet" id="signin" name="sign_in">Sign In</button>
             <?php include("../../Model/verify_log_user.php"); ?>

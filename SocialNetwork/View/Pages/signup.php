@@ -14,7 +14,7 @@ free_php_session();
     <body>
     <div class ="inscription">
     <br>
-        <p>Veuillez vous inscrire si vous n'avez pas encore de compte !</p>
+        <p>Please register if you don't have an account !</p>
         <form class="objet" action="" method="post">
         <strong > First Name : </strong>
             <div>
@@ -55,7 +55,7 @@ free_php_session();
             </select>
             </div>
 
-            <a class="objet" href="signin.php">Déjà inscrit ?</a>
+            <a class="objet" href="signin.php">Already registered ?</a>
 
             <button class="objet" id="signup" name="sign_up">Sign Up</button>
             <?php include("../../Controller/insert_user.php"); ?>

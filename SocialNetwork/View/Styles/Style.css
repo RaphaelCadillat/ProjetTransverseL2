@@ -2,7 +2,8 @@
   html, body{
     margin :0;
     padding: 0;
-    height: 100%;} 
+    height: 100%;
+} 
 
 #statutsuser
 {
@@ -17,7 +18,6 @@
     height: 70%;
     width: 25%;
     text-align: center;
-    margin-right: 5%;
     padding: 2%;
     display: flex;
     flex-flow: column;
@@ -26,28 +26,23 @@
 
 #refresh
 {   
-    width: 20%;
-    height: 40px;
-    left : 40%;
-    top : 80%;
-    float: inline-start;
+  
+   height: 30px;
 
 
 }
 
-#addfriend
+.addfriend
 {
     display: block;
     margin: auto;
-    margin-bottom: 10px;
+    height: 10%;
+
 }
 
 #l_user
 {
-    width: 20%;
-    height: 50%;
-    left : 40%;
-    top : 80%;
+   
     height: 30px;
 }
 
@@ -123,7 +118,6 @@ textarea{
     display: block;
     margin: auto;
     border-radius: 5px;
-    margin-bottom: 10px;
     resize: none;
 }
 #pp{
@@ -182,8 +176,8 @@ button{
     border-radius: 5px;
     width: 30%;
     border:none;
+    height: 20px;
     box-shadow: 2px 2px solid black;
-    height: 50%;
     display: block;
     margin: auto;
 
@@ -202,7 +196,7 @@ button{
     background-color: whitesmoke;
     width: 70%;
     height: 100%;
-    border-radius: 5px 5px 5px 5px;
+    
     
     
     
@@ -217,7 +211,6 @@ button{
     border:none;
     box-shadow: 2px 2px solid black;
     height: auto;
-    display: block;
     margin: auto;    
 
 }
@@ -229,8 +222,9 @@ button{
     margin: auto auto;
     height : 40%;
     text-align: center;
-    margin-top: 10px;
-    
+    margin-top: 30%;
+    top: 30%;
+    position: relative;
     
 }
 
@@ -252,12 +246,28 @@ button{
 
 #friend1{
     float: right;
-    
+    margin-right: 3.125%;
     
 }
 #friend2{
     float: right;
+    margin-right: 3.125%;
 }
 #friend3{
+    margin-left: 3.125%;
+}
+
+.container{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    width: 70%;
+    height: 30%;
     
+}
+
+#formlanguage{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
 }

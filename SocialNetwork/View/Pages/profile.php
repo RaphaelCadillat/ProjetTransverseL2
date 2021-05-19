@@ -72,7 +72,7 @@ include("../../Model/delete_user.php");
             
             <textarea class='objet' id="statutsuser" name="statuts_user"  disabled><?php echo htmlspecialchars($statuts_user) ?></textarea>
             </div>
-            
+            <br>
 
             <div class='objet'>
             <button  class="b_profile" id="changep" name="change_p" type="submit" formaction="change_user.php">Change your profile </button>

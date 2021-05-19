@@ -68,7 +68,7 @@ require '../../Controller/discover_friends/add_friend.php';
             </div>
             
             
-            <button id="addfriend" name="addfriend1" type="submit">Add <?php echo htmlspecialchars($fname_user1) ?> as friend</button>
+            <button class="addfriend" name="addfriend1" type="submit">Add <?php echo htmlspecialchars($fname_user1) ?> as friend</button>
         </form>
         
         
@@ -105,7 +105,7 @@ require '../../Controller/discover_friends/add_friend.php';
             </div>
             
 
-            <button id="addfriend" name="addfriend2" type="submit" >Add <?php echo htmlspecialchars($fname_user2) ?> as friend</button>
+            <button class="addfriend" name="addfriend2" type="submit" >Add <?php echo htmlspecialchars($fname_user2) ?> as friend</button>
         </form>
         
 
@@ -113,42 +113,41 @@ require '../../Controller/discover_friends/add_friend.php';
        
         <form class="friend" id="friend3" action="../../Controller/discover_friends/confirm_req/confirm_req3.php" method="post">
             <div> <img src="../../image/pp.png" alt="photo de profil" id="pp">
-            <input class="objet" id="fname" name="f_name3" value="<?php echo htmlspecialchars($fname_user3) ?>" disabled>
+            <input  id="fname" name="f_name3" value="<?php echo htmlspecialchars($fname_user3) ?>" disabled>
             </div>
            
 
             <div>
-            <input class="objet" id="lname" name="l_name3" value="<?php echo htmlspecialchars($lname_user3) ?>" disabled>
+            <input  id="lname" name="l_name3" value="<?php echo htmlspecialchars($lname_user3) ?>" disabled>
             </div>
             
 
             <div>
-            <input class="objet" id="email" name="mail_user3" value="<?php echo htmlspecialchars($mail_user3) ?>" disabled>
+            <input  id="email" name="mail_user3" value="<?php echo htmlspecialchars($mail_user3) ?>" disabled>
             </div>
             
             <div>
-            <input class="objet" id="userlang" name="user_lang3" value="<?php echo htmlspecialchars($lang_user3) ?>" disabled>
+            <input  id="userlang" name="user_lang3" value="<?php echo htmlspecialchars($lang_user3) ?>" disabled>
             </div>
            
 
             <div>
-            <input class="objet" id="univuser" name="univ_user3" value="<?php echo htmlspecialchars($univ_user3) ?>" disabled>
+            <input  id="univuser" name="univ_user3" value="<?php echo htmlspecialchars($univ_user3) ?>" disabled>
             </div>
             
 
             <div>
-            <textarea class="objet" id="statutsuser" name="statuts_user3" disabled><?php echo htmlspecialchars($statuts_user3) ?></textarea>
+            <textarea  id="statutsuser" name="statuts_user3" disabled><?php echo htmlspecialchars($statuts_user3) ?></textarea>
             </div>
 
-            <button class="objet" id="addfriend" name="addfriend3" type="submit" >Add <?php echo htmlspecialchars($fname_user3) ?> as friend</button>
+            <button  class="addfriend" name="addfriend3" type="submit" >Add <?php echo htmlspecialchars($fname_user3) ?> as friend</button>
         </form>
         </div>
         
         <br><br>
-       
-        <div  class="objet" id= "refresh">
+       <div class="container">
         
-        <form  class="objet"  action="homepage.php" method="post">
+        <form  class="objet" id="formlanguage"  action="homepage.php" method="post">
 
             <button class="objet" id="refresh" name="refresh" type="submit" >Refresh</button>
 
@@ -166,6 +165,8 @@ require '../../Controller/discover_friends/add_friend.php';
                 </select>
             
         </form>
+</div>
+
       
         
     

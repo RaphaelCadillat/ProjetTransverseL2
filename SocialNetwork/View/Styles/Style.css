@@ -1,8 +1,14 @@
 
- /* html, body{
+  html, body{
     margin :0;
     padding: 0;
-    height: 100%;} */
+    height: 100%;
+} 
+
+html{
+    background-color: lightblue;
+    font-family: Verdana;  
+}
 
 #statutsuser
 {
@@ -11,61 +17,37 @@
     height: 200px;
 }
 
-#friend1
-{
-    float:right;
-    left: 10%;
-}
-
-#friend2
-{
-    float: right;
-    left: 30%;
-}
-
-#friend3
-{
-    float: right;
-    left: 60%;
-}
-
 
 .friend{
-    margin-top: 30px;
-    background-color: white;
-    width: 20%;
-    height: 50%;
+   background-color: white; 
+    height: 70%;
+    width: 25%;
     text-align: center;
-    margin-right: 10%;
-    margin-bottom: 5%;
-    display: block;
+    padding: 2%;
+    display: flex;
+    flex-flow: column;
 
 }
 
 #refresh
-{
-    width: 20%;
-    height: 40px;
-    left : 40%;
-    top : 80%;
-    float: inline-start;
+{   
+  
+   height: 30px;
 
 
 }
 
-#addfriend
+.addfriend
 {
     display: block;
     margin: auto;
-    margin-bottom: 10px;
+    height: 10%;
+
 }
 
 #l_user
 {
-    width: 20%;
-    height: 50%;
-    left : 40%;
-    top : 80%;
+   
     height: 30px;
 }
 
@@ -127,30 +109,18 @@ input{
     width: 50%;
     border:none;
     border-bottom: 2px solid green;
-    margin-bottom:10px;
-    height: 30px;
     font-size: large;
     display: block;
     margin: auto;
-
+    margin-bottom: 3%;
 }
 
-html{
-    background-color: lightblue;
-    overflow-y: none;
-    font-family: Verdana;
-    
-}
+
 textarea{
-
     display: block;
     margin: auto;
     border-radius: 5px;
-    margin-bottom: 10px;
     resize: none;
-    width: 70%;
-
-
 }
 #pp{
     width: 100px;
@@ -161,13 +131,7 @@ textarea{
 }
 
 
-.profil{
 
-    margin: auto;
-    text-align: center;
-   
-    margin-top: 10px;
-}
 
 .b_profile{
     display: block;
@@ -175,15 +139,14 @@ textarea{
 }
 
 .body{
-    margin-top: 10px;
     box-shadow: 10px 10px 10px solid black;
-    width: 60%;
-    height: 100%;
-    background-color: white;
-    display: block;
+    display: flex;
     margin: auto;
     box-shadow: 10px 10px 10px solid black;
     text-align: center;
+    background-color: white;
+    width: 60%;
+    flex-flow: column;
 }
 
 #changep{
@@ -210,14 +173,13 @@ textarea{
     margin: auto;
 }
 button{
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 5%;
     background-color: lightgreen;
     border-radius: 5px;
     width: 30%;
     border:none;
+    height: 20px;
     box-shadow: 2px 2px solid black;
-    height: 50%;
     display: block;
     margin: auto;
 
@@ -235,9 +197,10 @@ button{
     flex-direction: column;
     background-color: whitesmoke;
     width: 70%;
-    height: 60%;
-    flex: 1;
-    border-radius: 5px 5px 5px 5px;
+    height: 100%;
+    
+    
+    
     
 }
 
@@ -250,20 +213,83 @@ button{
     border:none;
     box-shadow: 2px 2px solid black;
     height: auto;
-    display: block;
     margin: auto;    
 
 }
 #mdp_forms{
     
-    display: block;
+    display: flex;
     width: 100%;
     flex-flow: column;
-    margin: auto auto;
-    height: 100%;
+    margin: auto;
+    height : 40%;
+    top: 30%;
+    position: relative;
     text-align: center;
-    margin-top: 10px;
-    
     
 }
 
+.page{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+
+.friendflex{
+    display: flex;
+    margin-right: 3.125%;
+    margin-left: 3.125%;
+}
+
+#friend1{
+    float: right;
+    margin-right: 3.125%;
+    
+}
+#friend2{
+    float: right;
+    margin-right: 3.125%;
+}
+#friend3{
+    margin-left: 3.125%;
+}
+
+.container{
+    width: 70%;
+    height: 30%;
+    margin-left: 15%;
+    
+}
+
+#formlanguage{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+.reussi{
+    background-color: white;
+    width: 40%;
+    height: 30%;
+    display: block;
+    margin: auto;
+    
+    text-align: center;
+    font-size: x-large;
+    top: 35%;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+}
+
+#confirm{
+    flex: 1;
+    width: 60%;
+    height: 40px;
+    margin-bottom: 15%;
+    font-size: large;
+}

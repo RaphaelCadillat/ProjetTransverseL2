@@ -26,8 +26,9 @@ free_php_session();
 
             <button name="signup" id="signup" name="signup" action="View/Pages/signup.php">Sign Up</button><br>
             
-        </form>
+        </form><br>
         
+        <img src="image/logo.png" alt="logo Studint">
 
     </body>
 </html>

@@ -74,22 +74,20 @@
 	font-family: "Trebuchet MS";
 	margin-left: 10%;
 	position: relative;
-	margin-top: 40px;
 	height : 40px;
 	width: 120px;
 	text-align: center;
 	color: #022b5a;
 	background: linear-gradient(#9bc4f7, #80b5f5);
 	text-decoration:none;
-	overflow: hidden;
-	margin-bottom: 40px;
+	flex: 1;
+	margin-right: 2%;
 }
 
 .message_friend{
 	font-family: "Trebuchet MS";
 	text-align: center;
 	font-size: medium;
-	position: absolute;
 	text-shadow: 0 0px 0 rgba(0, 0, 0, 0.822);
 	text-decoration:none;
     background-color: lightgreen;
@@ -97,9 +95,10 @@
     width: 7%;
     border:none;
     box-shadow: 2px 2px solid black;
-    height: 25px;
-	margin-left: 18.8%;
-	margin-top: -67px;
+    height: 30px;
+	flex: 1;
+	margin: auto;
+	margin-right: 2%;
 }
 
 .cancel{
@@ -121,52 +120,56 @@
 
 .accept{
 	font-family: "Trebuchet MS";
-	margin-left: 10%;
 	display: block;
 	height : 30px;
 	width: 60px;
 	text-align: center;
 	text-shadow: 0 0px 0 rgba(0, 0, 0, 0.822);
-    background-color: lightgreen;
+    background: linear-gradient(#fc5c5c, #f50d0d);
     border-radius: 5px;
     width: 5%;
+	color: white;
     border:none;
     box-shadow: 2px 2px solid black;
-    height: 20px;
+    height: 30px;
     margin: auto;
 	text-decoration:none;
+	flex: 1;
+	margin-right: 2%;
 }
 
 .decline{
 	font-family: "Trebuchet MS";
-	margin-left: 30%;
+	margin: auto;
 	display: block;
 	height : 30px;
-	width: 80px;
+	width: 5%;
 	text-align: center;
 	text-shadow: 0 0px 0 rgba(0, 0, 0, 0.4);
-	color : rgb(51, 204, 51);
-	background: linear-gradient(#9999e6, #2e2eb8);
+	color :white;
+	background: linear-gradient(#fc5c5c, #f50d0d);
 	text-decoration:none;
+	flex: 1;
+	border-radius: 5px;
 }
 
 .delete{
 	font-family: "Trebuchet MS";
 	display: block;
-	position: relative;
 	background-color: lightgreen;
     border-radius: 5px;
     width: 5%;
     border:none;
     box-shadow: 2px 2px solid black;
-    height: 20px;
+    height: 30px;
 	color:black;
 	text-decoration:none;
 	text-align: center;
 	text-shadow: 0 0px 0 rgba(0, 0, 0, 0.815);
-	margin-left: 28%;
-	margin-top: -63px;
-	margin-bottom: 20px;
+	flex: 1;
+	
+	margin: auto;
+	margin-right: 2%;
 }
 
 .envoi{
@@ -203,4 +206,33 @@ p{
 	background: linear-gradient(#9bc4f7, #80b5f5);
 	text-decoration:none;
 	overflow: hidden;
+}
+
+
+.reception{
+	text-align: center;
+	width: 90%;
+	display: flex;
+	flex-flow:row ;
+	flex-wrap: wrap;
+}
+
+
+.bodyami{
+	box-shadow: 10px 10px 10px solid black;
+    display: flex;
+    margin: auto;
+    box-shadow: 10px 10px 10px solid black;
+    text-align: center;
+    background-color: white;
+    width: 60%;
+	height: 100%;
+    flex-flow: column;
+}
+
+.affichage_ami{
+	display: flex;
+	flex-flow: row;
+	width: 90%;
+	flex-wrap: wrap;
 }

@@ -103,7 +103,7 @@ catch(PDOException $pe){
             <div>
             <button type="submit" name="submit_event">Create event</button>
     
-                
+                <br> <br>
         </div>
     </body>
 </html>

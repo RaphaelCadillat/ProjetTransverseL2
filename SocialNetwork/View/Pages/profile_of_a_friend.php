@@ -70,58 +70,58 @@ catch(PDOException $pe){
     <body>
         <?php include('navigation_bar.php') ?>
         <div class= "body">
-        <form class="profil" action="" method="post">
-            <div>
+        <form class='objet' id="profil" action="" method="post">
+            <div class='objet'>
                 <img src="../../image/pp.png" alt="photo de profil" id="pp">
             </div>
 
-            <div>
+            <div class='objet'>
             <p>First Name :</p>
             <input class='objet' id="fname" name="f_name" value="<?php echo htmlspecialchars($friend_to_show['fname_user']) ?>" disabled>
             </div>
             
 
-            <div>
+            <div class='objet'>
             <p>Last Name :</p>
             <input class='objet' id="lname" name="l_name" value="<?php echo htmlspecialchars($friend_to_show['lname_user']) ?>" disabled>
             </div>
             
-            <div>
+            <div class='objet'>
             <p>Mail :</p>
             <input  class='objet' id="email" name="mail_user" value="<?php echo htmlspecialchars($friend_to_show['mail_user']) ?>" disabled>
             </div>
            
             
-            <div>
+            <div class='objet'>
             <p>Language :</p>
             <input class='objet' id="userlang" name="user_lang" value="<?php echo htmlspecialchars($lang['lang_lang']) ?>" disabled>
             </div>
            
 
-            <div>
+            <div class='objet'>
             <p>University :</p>
             <input class='objet' id="univuser" name="univ_user" value="<?php echo htmlspecialchars($friend_to_show['univ_user']) ?>" disabled>
             </div>
             
 
-            <div>
+            <div class='objet'>
             <p>Description :</p>
             
             <textarea class='objet' id="statutsuser" name="statuts_user"  disabled><?php echo htmlspecialchars($friend_to_show['statuts_user']) ?></textarea>
             </div>
             
 
-            <div>
+            <div class='objet'> 
             <button  class="b_profile" id="changep" name="back_p" type="submit" formaction="friends.php">Go to your friends list </button>
             </div>
-            <div>
+            <div class='objet'>
             <button  class="b_profile" id="changep" name="back_p" type="submit" formaction="list_event.php">Go to the event list </button>
             </div>
             
            
-
+            <br><br>
         </form>
-        <br> <br>
+        
         </div>
     </body>
 </html>

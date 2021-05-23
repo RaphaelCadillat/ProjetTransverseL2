@@ -101,7 +101,7 @@ require '../../Controller/discover_friends/add_friend.php';
             
 
             <div>
-            <textarea id="statutsuser" name="<?php echo htmlspecialchars($statuts_user2) ?>" disabled>Description</textarea>
+            <textarea id="statutsuser" name="statuts_user2" disabled><?php echo htmlspecialchars($statuts_user2) ?></textarea>
             </div>
             
 
